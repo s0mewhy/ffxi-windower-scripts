@@ -1,0 +1,234 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <AutoActivate>false</AutoActivate>
+        <AutoDeusExAutomata>false</AutoDeusExAutomata>
+        <autosets>
+            <caster-blm>
+                <frame>Stormwaker Frame</frame>
+                <head>Spiritreaver Head</head>
+                <slot01>Arcanoclutch</slot01>
+                <slot02>Ice Maker</slot02>
+                <slot03>Amplifier</slot03>
+                <slot04>Amplifier II</slot04>
+                <slot05>Mana Channeler</slot05>
+                <slot06>Mana Channeler II</slot06>
+                <slot07>Heatsink</slot07>
+                <slot08>Mana Tank</slot08>
+                <slot09>Mana Tank III</slot09>
+                <slot10>Mana Conserver</slot10>
+                <slot11>Optic Fiber</slot11>
+                <slot12>Optic Fiber II</slot12>
+            </caster-blm>
+            <caster-rdm>
+                <frame>Stormwaker Frame</frame>
+                <head>Stormwaker Head</head>
+                <slot01>Mana Booster</slot01>
+                <slot02>Tactical Processor</slot02>
+                <slot03>Tranquilizer IV</slot03>
+                <slot04>Resister</slot04>
+                <slot05>Stealth Screen II</slot05>
+                <slot06>Mana Jammer II</slot06>
+                <slot07>Optic Fiber</slot07>
+                <slot08>Optic Fiber II</slot08>
+                <slot09>Mana Conserver</slot09>
+                <slot10>Economizer</slot10>
+                <slot11>Mana Tank</slot11>
+                <slot12>Disruptor</slot12>
+            </caster-rdm>
+            <caster-whm>
+                <frame>Stormwaker Frame</frame>
+                <head>Soulsoother Head</head>
+                <slot01>Mana Booster</slot01>
+                <slot02>Tactical Processor</slot02>
+                <slot03>Mana Tank III</slot03>
+                <slot04>Power Cooler</slot04>
+                <slot05>Vivi-Valve II</slot05>
+                <slot06>Damage Gauge</slot06>
+                <slot07>Damage Gauge II</slot07>
+                <slot08>Optic Fiber</slot08>
+                <slot09>Heatsink</slot09>
+                <slot10>Resister</slot10>
+                <slot11>Resister II</slot11>
+                <slot12>Scanner</slot12>
+            </caster-whm>
+            <dd-basic>
+                <frame>Sharpshot Frame</frame>
+                <head>Valoredge Head</head>
+                <slot01>Inhibitor</slot01>
+                <slot02>Inhibitor II</slot02>
+                <slot03>Attuner</slot03>
+                <slot04>Magniplug</slot04>
+                <slot05>Armor Plate IV</slot05>
+                <slot06>Coiler</slot06>
+                <slot07>Coiler II</slot07>
+                <slot08>Truesights</slot08>
+                <slot09>Turbo Charger</slot09>
+                <slot10>Turbo Charger II</slot10>
+                <slot11>Optic Fiber</slot11>
+                <slot12>Optic Fiber II</slot12>
+            </dd-basic>
+            <dd-ranger>
+                <frame>Sharpshot Frame</frame>
+                <head>Sharpshot Head</head>
+                <slot01>Inhibitor</slot01>
+                <slot02>Inhibitor II</slot02>
+                <slot03>Magniplug</slot03>
+                <slot04>Dynamo</slot04>
+                <slot05>Attuner</slot05>
+                <slot06>Truesights</slot06>
+                <slot07>Barrage Turbine</slot07>
+                <slot08>Repeater</slot08>
+                <slot09>Drum Magazine</slot09>
+                <slot10>Dynamo III</slot10>
+                <slot11>Optic Fiber</slot11>
+                <slot12>Optic Fiber II</slot12>
+            </dd-ranger>
+            <dd-undead>
+                <frame>Valoredge Frame</frame>
+                <head>Valoredge Head</head>
+                <slot01>Turbo Charger</slot01>
+                <slot02>Turbo Charger II</slot02>
+                <slot03>Coiler</slot03>
+                <slot04>Coiler II</slot04>
+                <slot05>Hammermill</slot05>
+                <slot06>Magniplug II</slot06>
+                <slot07>Inhibitor</slot07>
+                <slot08>Inhibitor II</slot08>
+                <slot09>Attuner</slot09>
+                <slot10>Auto-Repair Kit</slot10>
+                <slot11>Optic Fiber</slot11>
+                <slot12>Optic Fiber II</slot12>
+            </dd-undead>
+            <default>
+
+            </default>
+            <tank-dd>
+                <frame>Valoredge Frame</frame>
+                <head>Soulsoother Head</head>
+                <slot01>Strobe</slot01>
+                <slot02>Strobe II</slot02>
+                <slot03>Magniplug</slot03>
+                <slot04>Barrier Module</slot04>
+                <slot05>Coiler II</slot05>
+                <slot06>Armor Plate IV</slot06>
+                <slot07>Turbo Charger</slot07>
+                <slot08>Turbo Charger II</slot08>
+                <slot09>Mana Jammer IV</slot09>
+                <slot10>Resister</slot10>
+                <slot11>Auto-Repair Kit III</slot11>
+                <slot12>Flashbulb</slot12>
+            </tank-dd>
+            <tank-harle>
+                <frame>Harlequin Frame</frame>
+                <head>Soulsoother Head</head>
+                <slot01>Strobe</slot01>
+                <slot02>Strobe II</slot02>
+                <slot03>Heat Seeker</slot03>
+                <slot04>Steam Jacket</slot04>
+                <slot05>Armor Plate IV</slot05>
+                <slot06>Mana Jammer IV</slot06>
+                <slot07>Turbo Charger</slot07>
+                <slot08>Turbo Charger II</slot08>
+                <slot09>Auto-Repair Kit III</slot09>
+                <slot10>Flashbulb</slot10>
+                <slot11>Galvanizer</slot11>
+                <slot12>Regulator</slot12>
+            </tank-harle>
+            <tank-sharpshot>
+                <frame>Sharpshot Frame</frame>
+                <head>Valoredge Head</head>
+                <slot01>Strobe</slot01>
+                <slot02>Strobe II</slot02>
+                <slot03>Magniplug</slot03>
+                <slot04>Magniplug II</slot04>
+                <slot05>Turbo Charger</slot05>
+                <slot06>Turbo Charger II</slot06>
+                <slot07>Truesights</slot07>
+                <slot08>Armor Plate IV</slot08>
+                <slot09>Auto-Repair Kit II</slot09>
+                <slot10>Galvanizer</slot10>
+                <slot11>Mana Jammer II</slot11>
+                <slot12>Flashbulb</slot12>
+            </tank-sharpshot>
+            <tank-turtle>
+                <frame>Valoredge Frame</frame>
+                <head>Soulsoother Head</head>
+                <slot01>Strobe</slot01>
+                <slot02>Strobe II</slot02>
+                <slot03>Galvanizer</slot03>
+                <slot04>Mana Jammer IV</slot04>
+                <slot05>Steam Jacket</slot05>
+                <slot06>Disruptor</slot06>
+                <slot07>Armor Plate IV</slot07>
+                <slot08>Barrier Module</slot08>
+                <slot09>Auto-Repair Kit II</slot09>
+                <slot10>Optic Fiber</slot10>
+                <slot11>Heat Capacitor</slot11>
+                <slot12>Flashbulb</slot12>
+            </tank-turtle>
+            <tank-up-arms>
+                <frame>Valoredge Frame</frame>
+                <head>Valoredge Head</head>
+                <slot01>Auto-Repair Kit III</slot01>
+                <slot02>Armor Plate II</slot02>
+                <slot03>Armor Plate III</slot03>
+                <slot04>Steam Jacket</slot04>
+                <slot05>Turbo Charger</slot05>
+                <slot06>Turbo Charger II</slot06>
+                <slot07>Stabilizer II</slot07>
+                <slot08>Coiler</slot08>
+                <slot09>Optic Fiber</slot09>
+                <slot10>Magniplug</slot10>
+                <slot11>Magniplug II</slot11>
+                <slot12>Tension Spring IV</slot12>
+            </tank-up-arms>
+        </autosets>
+        <bg>
+            <alpha>255</alpha>
+            <blue>0</blue>
+            <green>0</green>
+            <red>0</red>
+            <visible>true</visible>
+        </bg>
+        <burdentracker>true</burdentracker>
+        <flags>
+            <bold>false</bold>
+            <bottom>false</bottom>
+            <draggable>true</draggable>
+            <italic>false</italic>
+            <right>false</right>
+        </flags>
+        <maneuvertimers>true</maneuvertimers>
+        <padding>0</padding>
+        <pos>
+            <x>1600</x>
+            <y>920</y>
+        </pos>
+        <text>
+            <alpha>255</alpha>
+            <blue>255</blue>
+            <font>Consolas</font>
+            <fonts>
+
+            </fonts>
+            <green>255</green>
+            <red>255</red>
+            <size>10</size>
+            <stroke>
+                <alpha>255</alpha>
+                <blue>0</blue>
+                <green>0</green>
+                <red>0</red>
+                <width>0</width>
+            </stroke>
+        </text>
+        <visible>false</visible>
+    </global>
+    <arcym>
+        <pos>
+            <x>1581</x>
+            <y>646</y>
+        </pos>
+    </arcym>
+</settings>

@@ -1,0 +1,34 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!scripts/init.txt
+!addons/autocontrol/data/settings.xml
+!addons/autojoin/data/settings.xml
+!addons/azureSets/data/settings.xml
+!addons/battlemod/data/colors.xml
+!addons/battlemod/data/filters/*
+!addons/checkparam/data/settings.xml
+!addons/Debuffed/data/settings.xml
+!addons/DistancePlus/data/settings.xml
+!addons/equipviewer/data/settings.xml
+!addons/GearSwap/data/Arcym/*
+!addons/GearSwap/data/Arcym/*/*
+!addons/GearSwap/data/Maxmos/*
+!addons/GearSwap/data/Mirzah/*
+!addons/GearSwap/data/Ujara/*
+!addons/GearSwap/libs/*
+!addons/Omen/data/settings.xml
+!addons/PartyBuffs/data/settings.xml
+!addons/PetTP/data/settings.xml
+!addons/SellNPC/*
+!addons/sheolhelper/data/settings.xml
+!addons/Skillchains/data/settings.xml
+!addons/steps/*
+!addons/steps/data/*
+!addons/thtracker/data/settings.xml
+!addons/Treasury/data/settings.xml
+
+# ...even if they are in subdirectories
+!*/

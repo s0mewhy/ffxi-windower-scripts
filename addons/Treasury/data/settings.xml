@@ -1,0 +1,16 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <AutoDrop>false</AutoDrop>
+        <AutoStack>true</AutoStack>
+        <Delay>0</Delay>
+        <Drop />
+        <Lot />
+        <Pass />
+        <Verbose>false</Verbose>
+    </global>
+    <arcym>
+        <AutoDrop>true</AutoDrop>
+        <Drop>Cleric&apos;s Cap,Bard&apos;s Roundlet,Scout&apos;s Braccae,Oneiros Cappa,Relic Lance,Oneiros Cape,Ihintanto,Oneiros Cest,Melee Hose,Pantin Babouches,Oneiros Lance,Monster Trousers,Mirage Bazubands,Relic Bhuj,Oneiros Belt,Duelist&apos;s Boots,Valor Gauntlets,Koga Hakama,Oneiros Sash</Drop>
+    </arcym>
+</settings>

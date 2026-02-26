@@ -1,0 +1,99 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <setmode>PreserveTraits</setmode>
+        <setspeed>0.65</setspeed>
+        <spellsets>
+            <default>
+
+            </default>
+            <ody>
+                <slot01>healing breeze</slot01>
+                <slot02>tenebral crush</slot02>
+                <slot03>subduction</slot03>
+                <slot04>entomb</slot04>
+                <slot05>cocoon</slot05>
+                <slot06>quad. continuum</slot06>
+                <slot07>dream flower</slot07>
+                <slot08>atra. libations</slot08>
+                <slot09>magic fruit</slot09>
+                <slot10>erratic flutter</slot10>
+                <slot11>silent storm</slot11>
+                <slot12>magic hammer</slot12>
+                <slot13>occultation</slot13>
+                <slot14>delta thrust</slot14>
+                <slot15>feather barrier</slot15>
+                <slot16>screwdriver</slot16>
+                <slot17>tem. upheaval</slot17>
+                <slot18>sheep song</slot18>
+                <slot19>pollen</slot19>
+            </ody>
+            <pld>
+                <slot01>cocoon</slot01>
+                <slot02>soporific</slot02>
+                <slot03>wild carrot</slot03>
+                <slot04>sheep song</slot04>
+                <slot05>blank gaze</slot05>
+                <slot06>geist wall</slot06>
+                <slot07>screwdriver</slot07>
+                <slot08>healing breeze</slot08>
+                <slot09>jettatura</slot09>
+                <slot10>wild oats</slot10>
+                <slot11>metallic body</slot11>
+            </pld>
+            <vagary>
+                <slot01>searing tempest</slot01>
+                <slot02>tenebral crush</slot02>
+                <slot03>subduction</slot03>
+                <slot04>entomb</slot04>
+                <slot05>cocoon</slot05>
+                <slot06>quad. continuum</slot06>
+                <slot07>dream flower</slot07>
+                <slot08>anvil lightning</slot08>
+                <slot09>magic fruit</slot09>
+                <slot10>erratic flutter</slot10>
+                <slot11>spectral floe</slot11>
+                <slot12>magic hammer</slot12>
+                <slot13>occultation</slot13>
+                <slot14>delta thrust</slot14>
+                <slot15>scouring spate</slot15>
+            </vagary>
+            <vw1>
+                <slot01>Firespit</slot01>
+                <slot02>Heat Breath</slot02>
+                <slot03>Thermal Pulse</slot03>
+                <slot04>Blastbomb</slot04>
+                <slot05>Infrasonics</slot05>
+                <slot06>Frost Breath</slot06>
+                <slot07>Ice Break</slot07>
+                <slot08>Cold Wave</slot08>
+                <slot09>Sandspin</slot09>
+                <slot10>Magnetite Cloud</slot10>
+                <slot11>Cimicine Discharge</slot11>
+                <slot12>Bad Breath</slot12>
+                <slot13>Acrid Stream</slot13>
+                <slot14>Maelstrom</slot14>
+                <slot15>Corrosive Ooze</slot15>
+                <slot16>Cursed Sphere</slot16>
+                <slot17>Awful Eye</slot17>
+            </vw1>
+            <vw2>
+                <slot01>Hecatomb Wave</slot01>
+                <slot02>Mysterious Light</slot02>
+                <slot03>Leafstorm</slot03>
+                <slot04>Reaving Wind</slot04>
+                <slot05>Temporal Shift</slot05>
+                <slot06>Mind Blast</slot06>
+                <slot07>Blitzstrahl</slot07>
+                <slot08>Charged Whisker</slot08>
+                <slot09>Blank Gaze</slot09>
+                <slot10>Radiant Breath</slot10>
+                <slot11>Light of Penance</slot11>
+                <slot12>Actinic Burst</slot12>
+                <slot13>Death Ray</slot13>
+                <slot14>Eyes On Me</slot14>
+                <slot15>Sandspray</slot15>
+            </vw2>
+        </spellsets>
+    </global>
+</settings>

@@ -1,0 +1,19 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <mode>blacklist</mode>
+        <size>10</size>
+    </global>
+    <arcym>
+        <size>20</size>
+    </arcym>
+    <maxmos>
+        <size>20</size>
+    </maxmos>
+    <mirzah>
+        <size>20</size>
+    </mirzah>
+    <ujara>
+        <size>20</size>
+    </ujara>
+</settings>

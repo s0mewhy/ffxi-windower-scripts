@@ -1,0 +1,28 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <BLM>physical damage taken|magic damage taken|magic attack bonus|magic burst damage|magic burst damage ii|int|magic accuracy|magic damage|fast cast|quick cast|elemental magic casting time</BLM>
+        <BLU>physical damage taken|magic damage taken|haste|dual wield|store tp|double attack|triple attack|quadruple attack|critical hit rate|critical hit damage|weapon skill damage|fast cast|magic attack bonus|magic accuracy|cure potency</BLU>
+        <BRD>physical damage taken|magic damage taken|all songs|song effect duration|fast cast|song spellcasting time|singing skill|wind instrument skill|string instrument skill|magic accuracy|haste|dual wield|store tp|double attack|triple attack|quadruple attack|critical hit rate|critical hit damage|weapon skill damage|cure potency|cure potency ii|conserve mp|healing magic skill|all magic skills|cursna</BRD>
+        <BST>pet: double attack|pet: magic attack bonus|pet: damage taken</BST>
+        <COR>physical damage taken|magic damage taken|haste|dual wield|store tp|snapshot|rapid shot|fast cast|cure potency|magic accuracy|magic attack bonus|magic damage|weapon skill damage</COR>
+        <DNC>physical damage taken|magic damage taken|haste|dual wield|store tp|double attack|triple attack|quadruple attack</DNC>
+        <DRG>store tp|double attack|triple attack|quadruple attack|weapon skill damage</DRG>
+        <DRK>physical damage taken|magic damage taken|store tp|double attack|triple attack|quadruple attack|weapon skill damage</DRK>
+        <GEO>pet: regen|pet: damage taken|indicolure effect duration|fast cast|magic evasion|handbell skill|geomancy skill|geomancy</GEO>
+        <MNK>physical damage taken|magic damage taken|evasion|magic evasion|martial arts|haste|store tp|double attack|triple attack|quadruple attack|martial arts|subtle blow|subtle blow ii|critical hit rate|weapon skill damage|kick attacks|counter</MNK>
+        <NIN>store tp|double attack|triple attack|quadruple attack|subtle blow</NIN>
+        <PLD>enmity|damage taken|physical damage taken|magic damage taken|spell interruption rate|spell interruption rate down|phalanx|cure potency|cure potency received|potency of cure effect received|fast cast|haste|double attack</PLD>
+        <PUP>pet: hp|pet: damage taken|pet: regen|martial arts|store tp|double attack|triple attack|quadruple attack</PUP>
+        <RDM>magic attack bonus|magic burst damage|magic burst damage ii|magic accuracy|fast cast|quick cast|enfeebling magic skill|enhancing magic skill|store tp|dual wield</RDM>
+        <RNG>store tp|snapshot|rapid shot|weapon skill damage</RNG>
+        <RUN>enmity|damage taken|physical damage taken|magic damage taken|spell interruption rate|phalanx|inquartata|fastcast</RUN>
+        <SAM>store tp|double attack|triple attack|quadruple attack|weapon skill damage</SAM>
+        <SCH>magic attack bonus|magic burst damage|magic burst damage ii|magic accuracy|magic damage|fast cast|elemental magic casting time|cure potency|enh mag eff dur|enhancing magic effect duration</SCH>
+        <SMN>spell interruption rate down|fast cast|quick magic|occ quickens spellcasting|store tp|haste|physical damage taken|magic damage taken|pet: physical damage taken|pet: magic damage taken|blood pact delay|blood pact delay ii|blood pact damage|avatar perpetuation cost|refresh|pet: magic attack bonus|pet: attack|pet: double attack|pet: accuracy|pet: magic accuracy|summoning magic skill|pet: blood pact damage|pet: magic damage</SMN>
+        <THF>physical damage taken|magic damage taken|store tp|double attack|triple attack|quadruple attack|dual wield|critical hit rate|critical hit damage|haste|weapon skill damage|steal|sneak attack|trick attack|treasure hunter</THF>
+        <WAR>physical damage taken|magic damage taken|evasion|magic evasion|martial arts|haste|store tp|double attack|triple attack|quadruple attack|martial arts|subtle blow|subtle blow ii|critical hit rate|weapon skill damage|kick attacks|counter</WAR>
+        <WHM>magic accuracy|magic attack|magic attack bonus|cure potency|cure potency ii|conserve mp|fast cast|quick cast|cursna|cure spellcasting time|haste|enmity|healing magic casting time|afflatus solace|divine benison|damage taken|physical damage taken|magic damage taken|evasion|magic evasion|regen|refresh|conserve mp|magic skills|healing magic skill|divine magic skill|enfeebling magic skill|enhancing magic skill|Enhancing magic duration|cursna|spell interruption rate down</WHM>
+        <levelfilter>99</levelfilter>
+    </global>
+</settings>
