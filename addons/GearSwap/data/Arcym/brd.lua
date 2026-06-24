@@ -271,7 +271,7 @@ function init_gear_sets()
 		hands="Fili manchettes +3", 
 		--hands="Brioso cuffs" --Lullaby+
 		ring1="Stikini ring", --Magic skills +5, MAcc +8
-		ring2="Stikini ring", --Magic skills +5, MAcc +8
+		ring2="Metamorph ring +1",
 		back=song_cape, --CHR+20, MAcc +30
 		waist="Null belt", --MAcc
 		legs="Inyanga shalwar +2", --CHR +32, MAcc +45, Song dur +17%
@@ -293,7 +293,7 @@ function init_gear_sets()
 		hands="Inyanga dastanas +2", --Magic skills+20
 		--hands="Brioso cuffs" --Lullaby+
 		ring1="Stikini ring", --Magic skills +5, MAcc +8
-		ring2="Stikini ring", --Magic skills +5, MAcc +8
+		ring2="Metamorph ring +1",
 		back=song_cape, --CHR+20, MAcc +30
 		waist="Null belt",
 		legs="Inyanga shalwar +2", --CHR +32, MAcc +45, Song dur +17%
@@ -313,7 +313,7 @@ function init_gear_sets()
 		hands="Fili manchettes +3",
 		--ring1="Moonlight ring", 
 		ring1="Defending ring",
-		ring2="Stikini ring", 
+		ring2="Metamorph ring +1",
 		back=dex_da_cape, 
 		waist="Null belt",
 		legs="Zoar subligar +1", --Enmity+6
@@ -372,7 +372,7 @@ function init_gear_sets()
 		body="Fili hongreline +3", --CHR +48, Singing skill +24, Wind skill +24, Song dur +14%
 		hands="Fili manchettes +3", 
 		ring1="Stikini ring", --Magic skills +5, MAcc +8
-		ring2="Stikini ring", --Magic skills +5, MAcc +8
+		ring2="Metamorph ring +1",
 		back=song_cape, --CHR+20, MAcc +30
 		waist="Null belt", --MAcc +30
 		legs="Inyanga shalwar +2", --CHR +32, MAcc +45, Song dur +17%
@@ -416,7 +416,7 @@ function init_gear_sets()
 		body="Fili hongreline +3", --CHR +48, Singing skill +24, Wind skill +24, Song dur +14%
 		hands="Fili manchettes +3",
 		ring1="Stikini ring", --Magic skills +5, MAcc +8
-		ring2="Stikini ring", --Magic skills +5, MAcc +8
+		ring2="Metamorph ring +1",
 		back=song_cape, --CHR+20, MAcc +30
 		waist="Null belt", --MAcc +30
 		legs="Inyanga shalwar +2", --CHR +32, MAcc +45, Song dur +17%
