@@ -136,7 +136,7 @@ function init_gear_sets()
 
 	-- Enf. skill=78, MP=1659
 	sets.midcast['Enfeebling Magic'] = {main="Bunzi's rod",sub="Ammurapi shield",ammo="Pemphredo tathlum",
-		head="Theophany cap +3",neck="Null loop",ear1="Regal earring",ear2="Ebers earring +1",
+		head="Theophany cap +3",neck="Null loop",ear1="Regal earring",ear2="Ebers earring +2",
 		body="Theophany bliaut +3",hands="Regal cuffs",ring1="Kishar ring",ring2="Stikini ring",
 		back="Alaunus's cape",waist="Obstinate sash",legs="Chironic hose",feet="Theophany duckbills +3"}
 
@@ -155,7 +155,7 @@ function init_gear_sets()
 	sets.midcast['Healing Magic'] = {main="Gada",
 		sub="Thuellaic ecu +1", --CMP+4
 		ammo="Pemphredo tathlum",
-		head="Theophany cap +3",neck="Incanter's torque",ear1="Mendicant's earring",ear2="Ebers earring +1",
+		head="Theophany cap +3",neck="Incanter's torque",ear1="Mendicant's earring",ear2="Ebers earring +2",
 		body="Ebers bliaut +3",hands="Theophany mitts +3",ring1="Menelaus's ring",ring2="Mephitas's ring +1",
 		back="Alaunus's cape",waist="Hachirin-no-obi",legs="Piety pantaloons +3",feet="Vanya clogs"}
 	
@@ -193,7 +193,7 @@ function init_gear_sets()
 	-- Cursna=67, healing skill=73
     sets.midcast.Cursna = {
 		main="Yagrush",sub="Thuellaic ecu +1",ammo="Pemphredo tathlum",
-		head="Vanya hood",neck="Debilis medallion",ear1="Mendicant's earring",ear2="Ebers earring +1",
+		head="Vanya hood",neck="Debilis medallion",ear1="Mendicant's earring",ear2="Ebers earring +2",
 		body="Ebers bliaut +3",hands="Theophany mitts +3",ring1="Menelaus's ring",ring2="Haoma's ring",
 		back="Alaunus's cape",waist="Hachirin-no-obi",legs="Theophany pantaloons +3",feet="Vanya clogs"}
 
@@ -241,7 +241,7 @@ function init_gear_sets()
 	
 	sets.midcast.Flash = {
 		main="Daybreak",sub="Ammurapi shield",ammo="Pemphredo tathlum",
-		head="Theophany cap +3",neck="Jokushu chain",ear1="Regal earring",ear2="Ebers earring +1",
+		head="Theophany cap +3",neck="Jokushu chain",ear1="Regal earring",ear2="Ebers earring +2",
 		body="Theophany bliaut +3",hands="Bunzi's gloves",ring1="Stikini ring",ring2="Stikini ring",
 		back="Alaunus's cape",waist="Obstinate sash",legs="Theophany pantaloons +3",feet="Theophany duckbills +3"}
 	
@@ -357,7 +357,7 @@ function select_default_macro_book()
 end
 
 function fashion_particulars()
-	send_command('wait 1;input /lockstyleset 7;wait 1;gs equip sets.idle')
+	send_command('wait 1;input /lockstyleset 16;wait 1;gs equip sets.idle')
 end
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for standard casting events.
