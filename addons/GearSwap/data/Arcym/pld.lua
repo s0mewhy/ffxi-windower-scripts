@@ -34,7 +34,7 @@ function user_setup()
     state.ExtraDefenseMode = M{['description']='Extra Defense Mode', 'None', 'MP', 'Knockback', 'MP_Knockback'}
 	state.EquipShield = M(false, 'Equip Shield w/Defense')
 	
-	state.CombatWeapon = M{['description']='Weapon Selection','PDT','Savage'}
+	state.CombatWeapon = M{['description']='Weapon Selection','PDT','Savage','Aminon'}
 
     update_defense_mode()
     
@@ -381,7 +381,7 @@ function init_gear_sets()
 	-- Weapons
 	--------------------------------------
 	sets.weapons = {}
-	sets.weapons.Excal = {main="Excalibur",sub="Blurred shield +1"}
+	sets.weapons.Aminon = {main="Excalibur",sub="Aegis"}
 	sets.weapons.PDT = {main="Excalibur",sub="Duban"}
 	sets.weapons.Savage = {main="Naegling",sub="Blurred shield +1"}
     --------------------------------------
