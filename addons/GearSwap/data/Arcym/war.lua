@@ -247,7 +247,7 @@ function init_gear_sets()
 		body="Sakpata's breastplate",
 		hands="Sakpata's gauntlets",
 		ring1="Niqmaddu ring",
-		ring2="Moonbeam ring",
+		ring2="Moonlight ring",
 		back="Atheling mantle",
 		waist="Sailfi belt +1",
 		legs="Pummeler's cuisses +2",

@@ -542,7 +542,7 @@ end
 
 function fashion_particulars()
 	--send_command('wait 1;gs equip fashion.af;wait 1;input /lockstyle on')
-	send_command('wait 1;input /lockstyleset 32;gs equip sets.idle;')
+	send_command('wait 1;input /lockstyleset 33;gs equip sets.idle;')
 end
 
 -- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.

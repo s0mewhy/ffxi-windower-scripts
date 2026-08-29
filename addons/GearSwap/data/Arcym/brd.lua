@@ -55,7 +55,9 @@ function user_setup()
 	--brd_daggers = S{'Kali', 'Twashtar', 'Carnwenhan', "Gleti's Knife", 'Centovente', 'Aeneas', 'Tauret', 'Naegling'}
 	pick_tp_weapon()
 	
-	state.CombatWeapon = M{['description']='Weapon Selection','NaeGleti','CarnGleti','NaeShield','MpuShield'}
+	state.CombatWeapon = M{['description']='Weapon Selection', 'MpuGleti', 'NaeGleti'
+                                                              --  'MpuShield','NaeShield'
+                                                              }
 	
     -- Adjust this if using the Terpander (new +song instrument)
     info.ExtraSongInstrument = 'Daurdabla'
@@ -146,7 +148,7 @@ function init_gear_sets()
 	
     -- Precast sets to enhance JAs
     sets.precast.JA.Nightingale = {feet="Bihu slippers +2"}
-    sets.precast.JA.Troubadour = {body="Bihu justaucorps +3"}
+    sets.precast.JA.Troubadour = {body="Bihu justaucorps +4"}
     sets.precast.JA['Soul Voice'] = {legs="Bihu cannions +2"}
 	
 	sets.precast.Step = {
@@ -170,7 +172,7 @@ function init_gear_sets()
 		neck="Bard's charm +2", --TA 1%, Acc +8, SB +3
 		ear1="Ishvara earring", --WSD 2%
 		ear2="Moonshade earring", --TP bonus +250, Att +4
-        body="Bihu justaucorps +3", 
+        body="Bihu justaucorps +4", 
 		hands="Nyame gauntlets",
 		ring1="Ephramad's ring", --STR +10, DEX +10, AGI +10, Acc/Att/Racc/Ratt +20, PDL +10
 		ring2="Ilabrat ring", --DEX +10, Store TP +5, Att +25
@@ -187,7 +189,7 @@ function init_gear_sets()
 		neck="Bard's charm +2", --TA 1%, Acc +8, SB +3
 		ear1="Regal earring", --CHA +10
 		ear2="Fili earring +2", --CHA +7
-        body="Bihu justaucorps +3", 
+        body="Bihu justaucorps +4", 
 		hands="Nyame gauntlets", --STR +17, MND +40, Acc +40, Att +30, SC bonus +5
 		ring1="Ephramad's ring", --STR +10, DEX +10, AGI +10, Acc/Att/Racc/Ratt +20, PDL +10
 		ring2="Metamorph ring +1",
@@ -204,7 +206,7 @@ function init_gear_sets()
 		neck="Bard's charm +2", --TA 1%, Acc +8, SB +3
 		ear1="Dominance earring +1", 
 		ear2="Moonshade earring", --TP bonus +250, Att +4
-        body="Bihu justaucorps +3", 
+        body="Bihu justaucorps +4", 
 		hands="Nyame gauntlets",
 		ring1="Ephramad's ring", --STR +10, DEX +10, AGI +10, Acc/Att/Racc/Ratt +20, PDL +10
 		ring2="Ilabrat ring", --DEX +10, Store TP +5, Att +25
@@ -221,7 +223,7 @@ function init_gear_sets()
 		neck="Bard's charm +2", --TA 1%, Acc +8, SB +3
 		ear1="Ishvara earring",
 		ear2="Moonshade earring", --TP bonus +250, Att +4
-        body="Bihu justaucorps +3",
+        body="Bihu justaucorps +4",
 		hands="Nyame gauntlets",
 		ring1="Ephramad's ring", --STR +10, DEX +10, AGI +10, Acc/Att/Racc/Ratt +20, PDL +10
 		ring2="Ilabrat ring", --DEX +10, Store TP +5, Att +25
@@ -238,7 +240,7 @@ function init_gear_sets()
 		neck="Republican platinum medal",
 		ear1="Ishvara earring", --WSD 2%
 		ear2="Moonshade earring", --TP bonus +250, Att +4
-        body="Bihu justaucorps +3", 
+        body="Bihu justaucorps +4", 
 		hands="Nyame gauntlets", --STR +17, MND +40, Acc +40, Att +30, SC bonus +5
 		ring1="Ephramad's ring", --STR +10, DEX +10, AGI +10, Acc/Att/Racc/Ratt +20, PDL +10
 		ring2="Ilabrat ring", --DEX +10, Store TP +5, Att +25
@@ -263,7 +265,7 @@ function init_gear_sets()
 		main="Carnwenhan",
 		sub="Kali", 
 		range="Marsyas", --Song effect duration +50%
-		head="Brioso roundlet +3", --String skill +13
+		head="Brioso roundlet +4", --String skill +14
 		neck="Moonbow whistle +1", --CHR +23, MAcc +23 
 		ear1="Regal earring", --CHR +10 (set bonus: +30 Acc/RAcc/MAcc)
 		ear2="Fili earring +2", --Sing +12, Enm -9, MND+7, CHR+7, MAcc +16, Acc +16, DT -6%
@@ -275,7 +277,7 @@ function init_gear_sets()
 		back=song_cape, --CHR+20, MAcc +30
 		waist="Null belt", --MAcc
 		legs="Inyanga shalwar +2", --CHR +32, MAcc +45, Song dur +17%
-		feet="Brioso slippers +3" --CHR +48, MAcc +46, Wind skill +14, Song dur +15%
+		feet="Brioso slippers +4" --CHR +50, MAcc +56, Wind skill +15, Song dur +15% (set bonus: +30 Acc/RAcc/MAcc)
 	}
 	
 	--String skill 648=8 yalms radius
@@ -283,7 +285,7 @@ function init_gear_sets()
 		main="Carnwenhan",
 		sub="Kali", 
 		range="Daurdabla", --String+20
-		head="Brioso roundlet +3", --String skill +13
+		head="Brioso roundlet +4", --String skill +14
 		--neck="Moonbow whistle +1", --CHR +23, MAcc +23 
 		neck="Incanter's torque", --Magic skill+10
 		ear1="Regal earring", --CHR +10 (set bonus: +30 Acc/RAcc/MAcc)
@@ -305,7 +307,7 @@ function init_gear_sets()
 		main="Carnwenhan",
 		sub="Genmei shield", 
 		range="Daurdabla", 
-		head="Brioso roundlet +3", 
+		head="Brioso roundlet +4", 
 		neck="Unmoving collar +1", --Enmity+10
 		ear1="Regal earring", 
 		ear2="Cryptic earring", --Enmity+4
@@ -333,7 +335,7 @@ function init_gear_sets()
     sets.midcast.March = {hands="Fili manchettes +3"}
     sets.midcast.Minuet = {body="Fili hongreline +3"}
     sets.midcast.Minne = {legs="Mousai seraweels +1"}
-    sets.midcast.Paeon = {head="Brioso roundlet +3"}
+    sets.midcast.Paeon = {head="Brioso roundlet +4"}
 	--Prelude: swap brioso slippers for fili cothurnes for stat bonus instead of extra duration
 	sets.midcast.Prelude = {back=song_cape,feet="Fili cothurnes +3"}
     sets.midcast["Sentinel's Scherzo"] = {feet="Fili cothurnes +3"}
@@ -356,7 +358,7 @@ function init_gear_sets()
 		back=song_cape, --CHR+20, MAcc +30
 		--waist
 		legs="Inyanga shalwar +2", --CHR +32, MAcc +45, Song dur +17%
-		feet="Brioso slippers +3" --CHR +48, MAcc +46, Wind skill +14, Song dur +15%
+		feet="Brioso slippers +4" --CHR +50, MAcc +56, Wind skill +15, Song dur +15% (set bonus: +30 Acc/RAcc/MAcc)
 	}
 
     -- For song defbuffs (duration primary, accuracy secondary)
@@ -365,7 +367,7 @@ function init_gear_sets()
 		main="Carnwenhan", 
 		sub="Kali", 
 		range="Gjallarhorn", --CHR +10, Singing skill +25, Wind skill +25 
-		head="Brioso roundlet +3", --CHR +36, MAcc +51 (set bonus: +30 Acc/RAcc/MAcc)
+		head="Brioso roundlet +4", --CHR +43, MAcc +71 (set bonus: +30 Acc/RAcc/MAcc)
 		neck="Moonbow whistle +1", --CHR +23, MAcc +23 
 		ear1="Regal earring", --CHR +10 (set bonus: +30 Acc/RAcc/MAcc)
 		ear2="Fili earring +2", --Sing +12, Enm -9, MND+7, CHR+7, MAcc +16, Acc +16, DT -6%
@@ -376,7 +378,7 @@ function init_gear_sets()
 		back=song_cape, --CHR+20, MAcc +30
 		waist="Null belt", --MAcc +30
 		legs="Inyanga shalwar +2", --CHR +32, MAcc +45, Song dur +17%
-		feet="Brioso slippers +3" --CHR +48, MAcc +46, Wind skill +14, Song dur +15% (set bonus: +30 Acc/RAcc/MAcc)
+		feet="Brioso slippers +4" --CHR +50, MAcc +56, Wind skill +15, Song dur +15% (set bonus: +30 Acc/RAcc/MAcc)
 	}
 
     -- Song-specific recast reduction
@@ -409,7 +411,7 @@ function init_gear_sets()
 		main="Carnwenhan",
 		sub="Ammurapi shield",
 		range="Gjallarhorn", --CHR +10, Singing skill +25, Wind skill +25
-		head="Brioso roundlet +3", --CHR +36, MAcc +51 (set bonus: +30 Acc/RAcc/MAcc)
+		head="Brioso roundlet +4", --CHR +43, MAcc +71 (set bonus: +30 Acc/RAcc/MAcc)
 		neck="Null loop",
 		ear1="Regal earring", --CHR +10 (set bonus: +30 Acc/RAcc/MAcc)
 		ear2="Fili earring +2", --Sing +12, Enm -9, MND+7, CHR+7, MAcc +16, Acc +16, DT -6%
@@ -420,7 +422,7 @@ function init_gear_sets()
 		back=song_cape, --CHR+20, MAcc +30
 		waist="Null belt", --MAcc +30
 		legs="Inyanga shalwar +2", --CHR +32, MAcc +45, Song dur +17%
-		feet="Brioso slippers +3" --CHR +48, MAcc +46, Wind skill +14, Song dur +15% (set bonus: +30 Acc/RAcc/MAcc)
+		feet="Brioso slippers +4" --CHR +50, MAcc +56, Wind skill +15, Song dur +15% (set bonus: +30 Acc/RAcc/MAcc)
 	}
 	
     sets.midcast.Cure = {main="Daybreak",sub="Ammurapi shield",ammo="Pemphredo tathlum",
@@ -444,10 +446,10 @@ function init_gear_sets()
 		neck="Warder's charm +1",
 		ear1="Infused earring", --Regen +1, Eva +10, AGI +4
 		ear2="Eabani earring", --HP+45, Eva+15, MEva+8
-		body="Fili hongreline +3", --Regen+5, MEva+136
+		body="Adamantite armor", 
 		hands="Nyame gauntlets", 
 		--ring1="Moonlight ring",
-		ring1="Defending ring", --DT -10%
+		ring1="Moonlight ring", --DT -5%, HP+110
 		ring2="Shneddick ring", --run fast
 		back=song_cape, --DT -5
         --back="Archon cape", -- 12% chance to negate dmg if >=85% of HP
@@ -484,8 +486,8 @@ function init_gear_sets()
 	sets.weapons = {}
 	sets.weapons.NaeGleti = {main="Naegling",sub="Gleti's knife"}
 	sets.weapons.NaeCent = {main="Naegling",sub="Centovente"}
-	sets.weapons.CarnGleti = {main="Mpu Gandring",sub="Gleti's knife"}
-	sets.weapons.CarnCent = {main="Carnwenhan",sub="Centovente"}
+	sets.weapons.MpuGleti = {main="Mpu Gandring",sub="Gleti's knife"}
+	sets.weapons.MpuCent = {main="Mpu Gandring",sub="Centovente"}
 	sets.weapons.NaeShield = {main="Naegling",sub="Genbu's shield"}
 	sets.weapons.MpuShield = {main="Mpu Gandring",sub="Genbu's shield"}
     
@@ -527,7 +529,7 @@ function select_default_macro_book()
 end
 
 function fashion_particulars()
-	send_command('wait 1;input /lockstyleset 39;wait 1;gs equip sets.idle')
+	send_command('wait 1;input /lockstyleset 22;wait 1;gs equip sets.idle')
 end
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for standard casting events.

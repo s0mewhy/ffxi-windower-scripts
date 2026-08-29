@@ -187,7 +187,7 @@ function init_gear_sets()
     --range="kaja bow",
     ammo="Staunch tathlum +1",
     head="Souveran schaller +1",
-	neck="Moonbeam necklace",
+	neck="Moonlight necklace",
 	ear1="Etiolation earring",
     ear2="Chevalier's earring +2", --"Loquacious Earring", --2% FC
     body="Sakpata's plate",
@@ -203,7 +203,7 @@ function init_gear_sets()
     sets.midcast.Enmity = { --SIRD+93
 		ammo="Staunch tathlum +1", --SIRD+11
 		head="Souveran schaller +1", --Enmity+9, SIRD+20
-		neck="Moonbeam necklace", --Enmity+10, SIRD+10
+		neck="Moonlight necklace", --Enmity+10, SIRD+10
 		ear1="Cryptic earring", --Enmity+4
 		ear2="Knightly earring", --SIRD+9
 		body="Chevalier's cuirass +3", --Enmity+16, SIRD+20
@@ -225,12 +225,12 @@ function init_gear_sets()
 	--SIRD set, Cure Received caps at 30%, Cure Potency caps at 50%
 		ammo="Staunch tathlum +1", --11% SIRD
 		head="Souveran schaller +1", --20% SIRD, 15% Cure received
-		neck="Moonbeam necklace", --10% SIRD
+		neck="Moonlight necklace", --10% SIRD
 		ear1="Nourishing earring +1", --6% Potency, 3/5% SIRD
 		ear2="Chevalier's earring +2", --12% Potency 
 		body="Souveran cuirass +1", --15% Cure received, 11% Potency, Enmity+9
 		hands="Regal gauntlets", --Enh. dur. +20, SIRD +10
-		ring1="Moonbeam ring",
+		ring1="Moonlight ring",
 		ring2="Defending ring",
 		back=tank_cape,
 		waist="Audumbla Sash", --10% SIRD
@@ -247,7 +247,7 @@ function init_gear_sets()
 		ear2="Earthcry earring", -- SS +10
 		body="Souveran cuirass +1", --15% Cure received, 11% Potency
 		hands="Regal gauntlets", --Enh. dur. +20, SIRD +10 --"Stone mufflers", -- SS +30
-		ring1="Moonbeam ring",
+		ring1="Moonlight ring",
 		ring2="Defending ring",
 		back=tank_cape,
 		waist="Siegel Sash", -- SS +20
@@ -258,12 +258,12 @@ function init_gear_sets()
     sets.midcast['Enhancing Magic'] = {
 		ammo="Staunch tathlum +1",
 		head="Souveran schaller +1",
-		neck="Moonbeam necklace",
+		neck="Moonlight necklace",
 		ear1="Andoaa earring",
 		--ear2="Tuisto Earring",
 		--body="Shabti Cuirass",
 		hands="Regal gauntlets", --Enh. dur. +20, SIRD +10
-		ring1="Moonbeam ring",
+		ring1="Moonlight ring",
 		ring2="Defending ring",
 		back=tank_cape,
 		waist="Audumbla Sash",
@@ -279,12 +279,12 @@ function init_gear_sets()
     hands="Souveran handschuhs +1",
     legs="Sakpata's cuisses",
     feet="Souveran schuhs +1",
-    neck="Moonbeam necklace",
+    neck="Moonlight necklace",
     waist="Audumbla sash",
     left_ear="Andoaa earring",
     right_ear="Tuisto earring",
     left_ring="Defending ring",
-    right_ring="Moonbeam ring",
+    right_ring="Moonlight ring",
     back="Weard mantle",
 	}
 	
@@ -319,7 +319,7 @@ function init_gear_sets()
 		ear2="Chevalier's earring +2", --"Tuisto earring",
 		body="Adamantite armor", --"Sakpata's breastplate", 
 		hands="Sakpata's gauntlets", 
-		ring1="Moonbeam ring",
+		ring1="Moonlight ring",
 		ring2="Shneddick ring", 
 		back=tank_cape,
 		waist="Carrier's sash",
@@ -335,7 +335,7 @@ function init_gear_sets()
 		ear2="Chevalier's earring +2", 
 		body="Adamantite armor", --"Sakpata's breastplate", 
 		hands="Regal gauntlets", --Regen+10, refresh+1
-		ring1="Moonbeam ring", --Stinky rings+1
+		ring1="Moonlight ring", --Stinky rings+1
 		ring2="Shneddick ring", 
 		back=tank_cape,
 		waist="Fucho-no-obi", --Latent refresh
@@ -354,7 +354,7 @@ function init_gear_sets()
 		body="Adamantite armor",
 		hands="Sakpata's gauntlets", 
 		ring1="Vexer ring +1", 
-		ring2="Moonbeam ring", --"Shadow ring",
+		ring2="Moonlight ring", --"Shadow ring",
 		back=tank_cape, --Change tank cape to "Resist+10"
 		waist="Creed baudrier", --"Asklepian belt", 
 		legs="Sakpata's cuisses", 
@@ -396,8 +396,8 @@ function init_gear_sets()
 		ear2="Chevalier's earring +2", --"Tuisto earring",
 		body="Sakpata's breastplate",
 		hands="Sakpata's gauntlets",
-		ring1="Moonbeam ring",
-		ring2="Chirich ring +1",
+		ring1="Moonlight ring",
+		ring2="Moonlight ring",
 		back=tp_cape,
 		waist="Sailfi belt +1",
 		legs="Sakpata's cuisses",
