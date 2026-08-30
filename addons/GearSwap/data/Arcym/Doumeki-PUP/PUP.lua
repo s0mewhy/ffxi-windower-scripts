@@ -657,7 +657,7 @@ function init_gear_sets()
 		--Loricate Torque +1, --DT -6%
 		waist="Moonbow Belt +1", --DT -6%
 		ring1="Fortified Ring", --MDT -5%
-		ring2="Defending Ring", --DT -10%
+		ring2="Murky Ring", --DT -10%
 		ear1="Schere Earring", --Melee attack: Consumes 20 mp and reduces enmity by 20
 		ear2="Genmei Earring", --PDT -2%
     }

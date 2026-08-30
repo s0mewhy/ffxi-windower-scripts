@@ -14,7 +14,7 @@ function get_sets()
 	--Waltz potency + CHR
     sets.JA.Waltz = {ammo="Yamarang",
 		neck="Etoile gorget +2",
-		body="Maxixi casaque +1",ring1="Defending ring",
+		body="Maxixi casaque +1",ring1="Murky ring",
 		back=tp_cape,feet="Maxixi toe shoes +2"
 	}
 						
@@ -55,7 +55,7 @@ function get_sets()
     
     sets.status.Idle = {ammo="Mantoptera eye",
 		head="Nyame helm",neck="Bathy choker +1",ear1="Infused earring",ear2="Eabani earring",
-		body="Nyame mail",hands="Maculele bangles +3",ring1="Defending ring",ring2="Shneddick ring",
+		body="Nyame mail",hands="Maculele bangles +3",ring1="Murky ring",ring2="Shneddick ring",
 		back="Archon cape",waist="Carrier's sash",legs="Nyame flanchard",feet="Maculele toe shoes +3"}
 	
 	sets.fashion = {}

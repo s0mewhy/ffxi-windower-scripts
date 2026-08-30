@@ -224,7 +224,7 @@ function init_gear_sets()
 		ear2="Eabani earring", --HP+45, Eva+15, MEva+8
 		body="Nyame mail", --DT -9, MEva +139
 		hands="Nyame gauntlets", --DT -7, MEva +112
-		ring1="Defending ring", --DT -10%
+		ring1="Murky ring", --DT -10%
 		ring2="Shneddick ring", --Move speed 18%, resist petrify/bind/gravity +15
 		back=tp_cape, --TA Dmg +20, DEX +20, Acc +30/Att +20, STP +10, DT -5%
 		waist="Carrier's sash", 
@@ -248,7 +248,7 @@ function init_gear_sets()
 		--body="Adhemar jacket +1", --DEX+45, STR+26, Acc+55, Haste+4%, TA+4%, DW+6
 		hands="Malignance gloves", 
 		ring1="Ilabrat ring", 
-		ring2="Defending ring", 
+		ring2="Murky ring", 
         back=tp_cape, --TA Dmg +20, DEX +20, Acc +30/Att +20, STP +10, DT -5%
 		waist="Reiki yotai", 
 		legs="Malignance tights", --Store TP +10, Acc +50, Haste 9%, PDL 5%, DT -7%, MEva +150

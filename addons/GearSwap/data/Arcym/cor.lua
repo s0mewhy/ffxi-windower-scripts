@@ -42,7 +42,7 @@ function user_setup()
     state.CastingMode:options('Normal')
     state.IdleMode:options('Normal')
 
-    bullet = "Eminent bullet"
+    bullet = "Divine bullet"
     gear.RAbullet = bullet
     gear.WSbullet = bullet
     gear.MAbullet = bullet
@@ -184,7 +184,7 @@ function init_gear_sets()
     -- Idle sets
     sets.idle = {ammo=gear.RAbullet,
         head="Nyame helm",neck="Warder's charm +1",ear1="Infused earring",ear2="Eabani earring",
-        body="Adamantite armor",hands="Nyame gauntlets",ring1="Defending ring",ring2="Shneddick ring",
+        body="Adamantite armor",hands="Nyame gauntlets",ring1="Murky ring",ring2="Shneddick ring",
         back="Archon cape",waist="Carrier's sash",legs="Nyame flanchard",feet="Nyame sollerets"}
 	
     sets.Kiting = {ring2="Shneddick ring"}
@@ -208,17 +208,17 @@ function init_gear_sets()
     -- Normal melee group
     sets.engaged.Melee = {ammo=gear.RAbullet,
         head="Malignance chapeau",neck="Null loop",ear1="Telos earring",ear2="Suppanomimi",
-        body="Malignance tabard",hands="Malignance gloves",ring1="Ilabrat ring",ring2="Defending ring",--"Chirich ring +1",
+        body="Malignance tabard",hands="Malignance gloves",ring1="Ilabrat ring",ring2="Murky ring",--"Chirich ring +1",
         back="Null shawl",waist="Reiki yotai",legs="Malignance tights",feet="Malignance boots"}
 		
     sets.engaged.Melee.DW = {ammo=gear.RAbullet,
         head="Malignance chapeau",neck="Null loop",ear1="Telos earring",ear2="Suppanomimi",
-        body="Malignance tabard",hands="Malignance gloves",ring1="Ilabrat ring",ring2="Defending ring",--"Chirich ring +1",
+        body="Malignance tabard",hands="Malignance gloves",ring1="Ilabrat ring",ring2="Murky ring",--"Chirich ring +1",
         back="Null shawl",waist="Reiki yotai",legs="Malignance tights",feet="Malignance boots"}
     
 	sets.engaged.Ranged = {ammo=gear.RAbullet,
         head="Malignance chapeau",neck="Null loop",ear1="Telos earring",ear2="Suppanomimi",
-        body="Malignance tabard",hands="Malignance gloves",ring1="Ilabrat ring",ring2="Defending ring",
+        body="Malignance tabard",hands="Malignance gloves",ring1="Ilabrat ring",ring2="Murky ring",
         back="Null shawl",waist="Reiki yotai",legs="Malignance tights",feet="Malignance boots"}
 		
 end

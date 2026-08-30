@@ -243,17 +243,17 @@ function init_gear_sets()
 
     -- sets.defense.Evasion = {
         -- head="Pillager's Bonnet +1",neck="Ej Necklace",
-        -- body="Qaaxo Harness",hands="Pillager's Armlets +1",ring1="Defending Ring",ring2="Beeline Ring",
+        -- body="Qaaxo Harness",hands="Pillager's Armlets +1",ring1="Murky Ring",ring2="Beeline Ring",
         -- back="Canny Cape",waist="Flume Belt",legs="Kaabnax Trousers",feet="Iuitl Gaiters +1"}
 
     -- sets.defense.PDT = {ammo="Iron Gobbet",
         -- head="Pillager's Bonnet +1",neck="Twilight Torque",
-        -- body="Iuitl Vest",hands="Pillager's Armlets +1",ring1="Defending Ring",ring2=gear.DarkRing.physical,
+        -- body="Iuitl Vest",hands="Pillager's Armlets +1",ring1="Murky Ring",ring2=gear.DarkRing.physical,
         -- back="Iximulew Cape",waist="Flume Belt",legs="Pillager's Culottes +1",feet="Iuitl Gaiters +1"}
 
     -- sets.defense.MDT = {ammo="Demonry Stone",
         -- head="Pillager's Bonnet +1",neck="Twilight Torque",
-        -- body="Pillager's Vest +1",hands="Pillager's Armlets +1",ring1="Defending Ring",ring2="Shadow Ring",
+        -- body="Pillager's Vest +1",hands="Pillager's Armlets +1",ring1="Murky Ring",ring2="Shadow Ring",
         -- back="Engulfer Cape",waist="Flume Belt",legs="Pillager's Culottes +1",feet="Iuitl Gaiters +1"}
 
 
@@ -300,7 +300,7 @@ function init_gear_sets()
 	
     -- sets.engaged.Acc.PDT = {ammo="Honed Tathlum",
         -- head="Whirlpool Mask",neck="Twilight Torque",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        -- body="Iuitl Vest",hands="Pillager's Armlets +1",ring1="Defending Ring",ring2="Epona's Ring",
+        -- body="Iuitl Vest",hands="Pillager's Armlets +1",ring1="Murky Ring",ring2="Epona's Ring",
         -- back="Canny Cape",waist="Hurch'lan Sash",legs="Iuitl Tights",feet="Qaaxo Leggings"}
 
 	-- Fashion sets

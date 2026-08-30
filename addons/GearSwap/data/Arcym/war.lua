@@ -219,7 +219,7 @@ function init_gear_sets()
 		ear2="Etiolation earring", 
 		body="Sakpata's breastplate", 
 		hands="Sakpata's gauntlets", 
-		ring1="Defending ring",
+		ring1="Murky ring",
 		ring2="Shneddick ring", 
 		back="Archon cape",
 		waist="Carrier's sash",

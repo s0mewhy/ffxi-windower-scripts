@@ -52,7 +52,7 @@ function init_gear_sets()
 		ear2="Malignance earring", --FC 4
 		body="Inyanga jubbah +2", --FC 14
 		hands="Gendewitha gages +1", --FC 7
-		ring1="Defending ring",ring2="Kishar ring", --FC 4
+		ring1="Murky ring",ring2="Kishar ring", --FC 4
 		back="Fi follet cape +1", --FC 10
 		waist="Witful belt", --FC 3, QM 3
 		legs="Ebers pantaloons +3", --DT
@@ -168,7 +168,7 @@ function init_gear_sets()
 		ear1="Mendicant's earring", --CMP+2
 		ear2="Glorious earring", --CP2+2%,Enm-5
 		body="Ebers bliaut +3", --AS+18
-		hands="Theophany mitts +3",ring1="Defending ring",ring2="Mephitas's ring +1",
+		hands="Theophany mitts +3",ring1="Murky ring",ring2="Mephitas's ring +1",
 		back="Alaunus's cape",waist="Hachirin-no-obi",legs="Ebers pantaloons +3",
 		feet="Kaykaus boots +1" --CureP+17%,CMP+7%, set bonus CP2 4%
 	}
@@ -304,7 +304,7 @@ function init_gear_sets()
 		ear2="Ethereal earring", --Convert 3% of DT to MP, Eva +5, HP +15
 		body="Shamash robe", -- resist silence +90
 		hands="Ebers mitts +3", --DT -11, MEva +87
-		ring1="Defending ring", --DT -10%
+		ring1="Murky ring", --DT -10%
 		ring2="Shneddick ring", --run fast
 		back="Archon cape", -- 12% chance to negate dmg if >=85% of HP
 		--back="Alaunus's cape", --PDT -10%, MEva +10

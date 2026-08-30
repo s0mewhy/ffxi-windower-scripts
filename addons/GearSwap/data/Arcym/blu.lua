@@ -499,7 +499,7 @@ function init_gear_sets()
 		ear2="Eabani earring", --HP+45, Eva+15, MEva+8
 		body="Hashishin mintan +3", --Refresh +3, DT -12%, MEva +126
 		hands="Nyame gauntlets", --DT -7%, MEva+112, Eva+80
-		--ring1="Defending ring", --DT -10%
+		--ring1="Murky ring", --DT -10%
 		ring1="Vengeful ring", --Eva+9, MEva+9, MP+20
 		ring2="Warden's ring", --Death resist +10, enemy crit rate -5%, PDt -3%
 		back="Archon cape", -- 12% chance to negate dmg if >=85% of HP
@@ -516,12 +516,12 @@ function init_gear_sets()
     -- Defense sets
     -- sets.defense.PDT = {ammo="Iron Gobbet",
         -- head="Whirlpool Mask",neck="Wiglen Gorget",ear1="Bloodgem Earring",
-        -- body="Iuitl Vest",hands="Iuitl Wristbands",ring1="Defending Ring",ring2=gear.DarkRing.physical,
+        -- body="Iuitl Vest",hands="Iuitl Wristbands",ring1="Murky Ring",ring2=gear.DarkRing.physical,
         -- back="Archon cape",waist="Flume Belt",legs="Nahtirah Trousers",feet="Iuitl Gaiters +1"}
 
     -- sets.defense.MDT = {ammo="Demonry Stone",
         -- head="Whirlpool Mask",neck="Twilight Torque",ear1="Bloodgem Earring",
-        -- body="Hagondes Coat",hands="Iuitl Wristbands",ring1="Defending Ring",ring2="Shadow Ring",
+        -- body="Hagondes Coat",hands="Iuitl Wristbands",ring1="Murky Ring",ring2="Shadow Ring",
         -- back="Engulfer Cape",waist="Flume Belt",legs="Nahtirah Trousers",feet="Iuitl Gaiters +1"}
 
     sets.Kiting = {ring2="Shneddick ring"}

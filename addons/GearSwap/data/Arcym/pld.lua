@@ -193,7 +193,7 @@ function init_gear_sets()
     body="Sakpata's plate",
     hands="Sakpata's gauntlets",
 	ring1="Prolix ring",
-    ring2="Defending ring",
+    ring2="Murky ring",
 	back=tank_cape,
 	waist="Audumbla sash",
     legs="Founder's hose",
@@ -209,7 +209,7 @@ function init_gear_sets()
 		body="Chevalier's cuirass +3", --Enmity+16, SIRD+20
 		hands="Regal gauntlets", --Enh. dur. +20, SIRD +10 --"Caballarius Gauntlets +3",
 		ring1="Vexer ring +1", --Enmity+4 --"Supershear Ring",
-		ring2="Defending ring", 
+		ring2="Murky ring", 
 		back=tank_cape,
 		waist="Audumbla Sash", --SIRD+10
 		legs="Chevalier's cuisses +3", --DT-13, Enmity retention
@@ -231,7 +231,7 @@ function init_gear_sets()
 		body="Souveran cuirass +1", --15% Cure received, 11% Potency, Enmity+9
 		hands="Regal gauntlets", --Enh. dur. +20, SIRD +10
 		ring1="Moonlight ring",
-		ring2="Defending ring",
+		ring2="Murky ring", --SIRD +3
 		back=tank_cape,
 		waist="Audumbla Sash", --10% SIRD
 		legs="Founder's hose", --30% SIRD
@@ -248,7 +248,7 @@ function init_gear_sets()
 		body="Souveran cuirass +1", --15% Cure received, 11% Potency
 		hands="Regal gauntlets", --Enh. dur. +20, SIRD +10 --"Stone mufflers", -- SS +30
 		ring1="Moonlight ring",
-		ring2="Defending ring",
+		ring2="Murky ring",
 		back=tank_cape,
 		waist="Siegel Sash", -- SS +20
 		legs="Haven hose", -- SS +20
@@ -264,7 +264,7 @@ function init_gear_sets()
 		--body="Shabti Cuirass",
 		hands="Regal gauntlets", --Enh. dur. +20, SIRD +10
 		ring1="Moonlight ring",
-		ring2="Defending ring",
+		ring2="Murky ring",
 		back=tank_cape,
 		waist="Audumbla Sash",
 		legs="Founder's hose",
@@ -283,7 +283,7 @@ function init_gear_sets()
     waist="Audumbla sash",
     left_ear="Andoaa earring",
     right_ear="Tuisto earring",
-    left_ring="Defending ring",
+    left_ring="Murky ring",
     right_ring="Moonlight ring",
     back="Weard mantle",
 	}

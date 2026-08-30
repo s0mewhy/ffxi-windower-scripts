@@ -180,7 +180,7 @@ function init_gear_sets()
     -- Defense sets
     -- sets.defense.PDT = {ammo="Iron Gobbet",
         -- head="Uk'uxkaj Cap",neck="Twilight Torque",
-        -- body="Otronif Harness +1",hands="Otronif Gloves",ring1="Defending Ring",ring2=gear.DarkRing.physical,
+        -- body="Otronif Harness +1",hands="Otronif Gloves",ring1="Murky Ring",ring2=gear.DarkRing.physical,
         -- back="Shadow Mantle",waist="Black Belt",legs="Qaaxo Tights",feet="Otronif Boots +1"}
 
     -- sets.defense.HP = {ammo="Iron Gobbet",
@@ -190,7 +190,7 @@ function init_gear_sets()
 
     -- sets.defense.MDT = {ammo="Demonry Stone",
         -- head="Uk'uxkaj Cap",neck="Twilight Torque",
-        -- body="Otronif Harness +1",hands="Anchorite's Gloves +1",ring1="Defending Ring",ring2="Shadow Ring",
+        -- body="Otronif Harness +1",hands="Anchorite's Gloves +1",ring1="Murky Ring",ring2="Shadow Ring",
         -- back="Engulfer Cape",waist="Black Belt",legs="Qaaxo Tights",feet="Daihanshi Habaki"}
 
     -- sets.Kiting = {feet="Herald's Gaiters"}

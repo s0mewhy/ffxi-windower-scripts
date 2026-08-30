@@ -433,7 +433,7 @@ function init_gear_sets()
 		ear2="Eabani earring", 
 		body="Nyame mail", 
 		hands="Nyame gauntlets", 
-		ring1="Defending ring",
+		ring1="Murky ring",
 		ring2="Shneddick ring", 
 		back="Archon cape", 
 		waist="Null belt",

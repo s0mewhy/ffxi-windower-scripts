@@ -108,7 +108,7 @@ function init_gear_sets()
 		ear2="Fili earring +2",
 		body="Inyanga jubbah +2", -- FC 14
 		hands="Gendewitha gages +1", -- SC 7+5
-		ring1="Defending ring",
+		ring1="Murky ring",
 		ring2="Kishar ring", -- FC 4
 		back="Fi follet cape +1", -- FC 10
 		waist="Embla sash", -- FC 5
@@ -134,7 +134,7 @@ function init_gear_sets()
 		ear2="Fili earring +2",
 		body="Inyanga jubbah +2", -- FC 14
 		hands="Gendewitha gages +1", -- SC 7+5
-		ring1="Defending ring",
+		ring1="Murky ring",
 		ring2="Kishar ring", -- FC 4
 		back="Fi follet cape +1", -- FC 10
 		waist="Embla sash", -- FC 5
@@ -314,7 +314,7 @@ function init_gear_sets()
 		body="Emet harness +1", --Enmity+10
 		hands="Fili manchettes +3",
 		--ring1="Moonlight ring", 
-		ring1="Defending ring",
+		ring1="Murky ring",
 		ring2="Metamorph ring +1",
 		back=dex_da_cape, 
 		waist="Null belt",
@@ -394,7 +394,7 @@ function init_gear_sets()
     -- Dummy song with Daurdabla; minimize duration to make it easy to overwrite.
     sets.midcast.DaurdablaDummy = {main="",range=info.ExtraSongInstrument,
 		head="Vanya hood",neck="Loricate torque +1",ear1="Etiolation earring",ear2="Ethereal earring",
-		body="Inyanga jubbah +2",hands="Gendewitha gages +1",ring1="Defending ring",ring2="Kishar ring",
+		body="Inyanga jubbah +2",hands="Gendewitha gages +1",ring1="Murky ring",ring2="Kishar ring",
 		back="Fi follet cape +1",waist="Embla sash",legs="Ayanmo cosciales +2",feet="Ayanmo gambieras +2"}
 
     -- Other general spells and classes.
@@ -448,8 +448,7 @@ function init_gear_sets()
 		ear2="Eabani earring", --HP+45, Eva+15, MEva+8
 		body="Adamantite armor", 
 		hands="Nyame gauntlets", 
-		--ring1="Moonlight ring",
-		ring1="Moonlight ring", --DT -5%, HP+110
+		ring1="Murky ring",
 		ring2="Shneddick ring", --run fast
 		back=song_cape, --DT -5
         --back="Archon cape", -- 12% chance to negate dmg if >=85% of HP
@@ -461,12 +460,12 @@ function init_gear_sets()
     -- Defense sets
     -- sets.defense.PDT = {main=gear.Staff.PDT,sub="Mephitis Grip",
         -- head="Gendewitha Caubeen",neck="Twilight Torque",
-        -- body="Gendewitha Bliaut",hands="Gendewitha Gages",ring1="Defending Ring",ring2=gear.DarkRing.physical,
+        -- body="Gendewitha Bliaut",hands="Gendewitha Gages",ring1="Murky Ring",ring2=gear.DarkRing.physical,
         -- back="Umbra Cape",waist="Flume Belt",legs="Gendewitha Spats",feet="Gendewitha Galoshes"}
 
     -- sets.defense.MDT = {main=gear.Staff.PDT,sub="Mephitis Grip",
         -- head="Nahtirah Hat",neck="Twilight Torque",
-        -- body="Gendewitha Bliaut",hands="Gendewitha Gages",ring1="Defending Ring",ring2="Shadow Ring",
+        -- body="Gendewitha Bliaut",hands="Gendewitha Gages",ring1="Murky Ring",ring2="Shadow Ring",
         -- back="Engulfer Cape",waist="Flume Belt",legs="Bihu Cannions",feet="Gendewitha Galoshes"}
 
     sets.Kiting = {ring2="Shneddick ring"}
@@ -509,7 +508,7 @@ function init_gear_sets()
 	}
 	
 	sets.engaged.Acc = set_combine(sets.engaged, {ear2="Fili earring +2"})
-		
+	
 	-- Fashion sets
 	sets.fashion = {}
 	sets.fashion.mousai = {

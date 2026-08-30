@@ -340,12 +340,12 @@ function init_gear_sets()
     -- Idle sets
     sets.idle = {main="Gridarvor",sub="Oneiros grip",ammo="Epitaph",
         head="Beckoner's horn +3",neck="Caller's pendant",ear1="Infused earring",ear2="Beckoner's earring +1",
-        body="Beckoner's doublet +3",hands="Bunzi's gloves",ring1="Defending ring",ring2="Inyanga ring",
+        body="Beckoner's doublet +3",hands="Bunzi's gloves",ring1="Murky ring",ring2="Inyanga ring",
         back="Campestres's cape",waist="Carrier's sash",legs="Assiduity Pants",feet="Baayami sabots"}
 
     sets.idle.DT = {main="Gridarvor",sub="Oneiros grip",ammo="Epitaph",
         head="Beckoner's horn +3",neck="Caller's pendant",ear1="Infused earring",ear2="Beckoner's earring +1",
-        body="Beckoner's doublet +3",hands="Bunzi's gloves",ring1="Defending ring",ring2="Inyanga ring",
+        body="Beckoner's doublet +3",hands="Bunzi's gloves",ring1="Murky ring",ring2="Inyanga ring",
         back="Campestres's cape",waist="Carrier's sash",legs="Assiduity Pants",feet="Baayami sabots"}
 		
 	sets.idle.Speed = set_combine(sets.idle.DT, {ring2="Shneddick ring"})
@@ -372,7 +372,7 @@ function init_gear_sets()
     
 	sets.idle.Avatar = {main="Gridarvor",sub="Oneiros grip",ammo="Epitaph",
         head="Beckoner's horn +3",neck="Caller's pendant",ear1="Crepuscular earring",ear2="Beckoner's earring +1",
-        body="Beckoner's doublet +3",hands="Bunzi's gloves",ring1="Defending ring",ring2="Inyanga ring",
+        body="Beckoner's doublet +3",hands="Bunzi's gloves",ring1="Murky ring",ring2="Inyanga ring",
         back="Campestres's cape",waist="Carrier's sash",legs="Assiduity Pants",feet="Bunzi's sabots"}
 
     -- sets.idle.PDT.Avatar = {main="Grioavolr",sub="Oneiros grip",ammo="Epitaph",
@@ -403,7 +403,7 @@ function init_gear_sets()
         
     sets.perp = {main="Gridarvor",sub="Oneiros grip",ammo="Epitaph",
         head="Beckoner's horn +3",neck="Caller's pendant",ear1="Crepuscular earring",ear2="Beckoner's earring +1",
-        body="Beckoner's doublet +3",hands="Bunzi's gloves",ring1="Defending ring",ring2="Inyanga ring",
+        body="Beckoner's doublet +3",hands="Bunzi's gloves",ring1="Murky ring",ring2="Inyanga ring",
         back="Campestres's cape",waist="Carrier's sash",legs="Assiduity Pants",feet="Bunzi's sabots"}
 		
     -- Caller's Bracer's halve the perp cost after other costs are accounted for.

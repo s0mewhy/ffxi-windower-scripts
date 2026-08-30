@@ -113,7 +113,7 @@ function get_sets()
 	sets.idle = {}
 	sets.idle.DT = {main="Marin staff +1",sub="Enki strap",ammo="Ghastly tathlum +1",
 		head="Wicce petasos +3",neck="Bathy choker +1",ear1="Infused earring",ear2="Etiolation Earring",
-		body="Wicce coat +3",hands="Wicce gloves +3",ring1="Defending ring",ring2="Shneddick ring",
+		body="Wicce coat +3",hands="Wicce gloves +3",ring1="Murky ring",ring2="Shneddick ring",
 		back="Taranus's cape",waist="Fucho-no-obi",legs="Wicce chausses +3",feet="Wicce sabots +3"}
 	
 	sets.fashion = {}
