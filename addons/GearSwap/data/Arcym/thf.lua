@@ -67,7 +67,7 @@ function init_gear_sets()
 
 	-- TH cap = 5
     sets.TreasureHunter = {ammo="Perfect lucky egg",
-		hands="Plunderer's armlets +3",feet="Skulker's poulaines +3"}
+		hands="Plunderer's armlets +4",feet="Skulker's poulaines +3"}
     -- sets.ExtraRegen = {head="Ocelomeh Headpiece +1"}
     -- sets.Kiting = {feet="Skadi's Jambeaux +1"}
 
@@ -93,7 +93,7 @@ function init_gear_sets()
     --sets.precast.JA['Conspirator'] = {body="Skulker's vest +2"}
     sets.precast.JA['Steal'] = {ammo="Barathrum",feet="Pillager's poulaines +3"}
     sets.precast.JA['Despoil'] = {feet="Skulker's poulaines +3"}
-    sets.precast.JA['Perfect Dodge'] = {hands="Plunderer's armlets +3"}
+    sets.precast.JA['Perfect Dodge'] = {hands="Plunderer's armlets +4"}
     -- sets.precast.JA['Feint'] = {} -- {legs="Assassin's Culottes +2"}
 
     sets.precast.JA['Sneak Attack'] = sets.buff['Sneak Attack']
