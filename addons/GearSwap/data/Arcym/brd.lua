@@ -270,8 +270,7 @@ function init_gear_sets()
 		ear1="Regal earring", --CHR +10 (set bonus: +30 Acc/RAcc/MAcc)
 		ear2="Fili earring +2", --Sing +12, Enm -9, MND+7, CHR+7, MAcc +16, Acc +16, DT -6%
 		body="Fili hongreline +3", --CHR +48, Singing skill +24, Wind skill +24, Song dur +14%
-		hands="Fili manchettes +3", 
-		--hands="Brioso cuffs" --Lullaby+
+		hands="Brioso cuffs +4", --Lullaby+
 		ring1="Stikini ring", --Magic skills +5, MAcc +8
 		ring2="Metamorph ring +1",
 		back=song_cape, --CHR+20, MAcc +30
@@ -292,8 +291,7 @@ function init_gear_sets()
 		ear2="Gersemi earring", --String+10
 		--need brioso justaucorps here
 		body="Fili hongreline +3", --CHR +48, Singing skill +24, Wind skill +24, Song dur +14%
-		hands="Inyanga dastanas +2", --Magic skills+20
-		--hands="Brioso cuffs" --Lullaby+
+		hands="Brioso cuffs +4", --Lullaby+
 		ring1="Stikini ring", --Magic skills +5, MAcc +8
 		ring2="Metamorph ring +1",
 		back=song_cape, --CHR+20, MAcc +30
@@ -348,6 +346,7 @@ function init_gear_sets()
     -- For song buffs (duration and AF3 set bonus)
 	sets.midcast.SongEffect = {
 		main="Carnwenhan", 
+        sub="Kali", -- in FC set
 		range="Gjallarhorn", --Singing skill +25, Wind skill +25 
 		head="Fili calot +3", --CHR +42
 		neck="Moonbow whistle +1", --CHR +23, MAcc +23 
@@ -365,20 +364,20 @@ function init_gear_sets()
 	-- CHR/MAcc/Wind skill/Singing skill, Song duration
 	sets.midcast.SongDebuff = {
 		main="Carnwenhan", 
-		sub="Kali", 
+		sub="Ammurapi shield", 
 		range="Gjallarhorn", --CHR +10, Singing skill +25, Wind skill +25 
-		head="Brioso roundlet +4", --CHR +43, MAcc +71 (set bonus: +30 Acc/RAcc/MAcc)
+		head="Brioso roundlet +4", --CHR +43, MAcc +71 (set bonus: +60 MAcc w/ 4 pieces+regal earring)
 		neck="Moonbow whistle +1", --CHR +23, MAcc +23 
-		ear1="Regal earring", --CHR +10 (set bonus: +30 Acc/RAcc/MAcc)
+		ear1="Regal earring", --CHR +10 (set bonus: +60 MAcc)
 		ear2="Fili earring +2", --Sing +12, Enm -9, MND+7, CHR+7, MAcc +16, Acc +16, DT -6%
 		body="Fili hongreline +3", --CHR +48, Singing skill +24, Wind skill +24, Song dur +14%
-		hands="Fili manchettes +3", 
+		hands="Brioso cuffs +4", --MAcc +58, CHR+41, set bonus
 		ring1="Stikini ring", --Magic skills +5, MAcc +8
 		ring2="Metamorph ring +1",
 		back=song_cape, --CHR+20, MAcc +30
 		waist="Null belt", --MAcc +30
 		legs="Inyanga shalwar +2", --CHR +32, MAcc +45, Song dur +17%
-		feet="Brioso slippers +4" --CHR +50, MAcc +56, Wind skill +15, Song dur +15% (set bonus: +30 Acc/RAcc/MAcc)
+		feet="Brioso slippers +4" --CHR +50, MAcc +56, Wind skill +15, Song dur +15% (set bonus: +60 MAcc)
 	}
 
     -- Song-specific recast reduction
@@ -456,18 +455,7 @@ function init_gear_sets()
 		legs="Fili rhingrave +3", --DT -12, MEva +147
 		feet="Nyame sollerets" 
 	}
-	       
-    -- Defense sets
-    -- sets.defense.PDT = {main=gear.Staff.PDT,sub="Mephitis Grip",
-        -- head="Gendewitha Caubeen",neck="Twilight Torque",
-        -- body="Gendewitha Bliaut",hands="Gendewitha Gages",ring1="Murky Ring",ring2=gear.DarkRing.physical,
-        -- back="Umbra Cape",waist="Flume Belt",legs="Gendewitha Spats",feet="Gendewitha Galoshes"}
-
-    -- sets.defense.MDT = {main=gear.Staff.PDT,sub="Mephitis Grip",
-        -- head="Nahtirah Hat",neck="Twilight Torque",
-        -- body="Gendewitha Bliaut",hands="Gendewitha Gages",ring1="Murky Ring",ring2="Shadow Ring",
-        -- back="Engulfer Cape",waist="Flume Belt",legs="Bihu Cannions",feet="Gendewitha Galoshes"}
-
+	
     sets.Kiting = {ring2="Shneddick ring"}
 
     sets.latent_refresh = {waist="Fucho-no-obi"}
