@@ -7,7 +7,6 @@
 !addons/autocontrol/data/settings.xml
 !addons/autojoin/data/settings.xml
 !addons/azureSets/data/settings.xml
-!addons/azureSets/azuresets.lua
 !addons/battlemod/data/colors.xml
 !addons/battlemod/data/filters/*
 !addons/checkparam/data/settings.xml
