@@ -56,7 +56,7 @@ function user_setup()
 	pick_tp_weapon()
 	
 	state.CombatWeapon = M{['description']='Weapon Selection', 'MpuGleti', 'NaeGleti'
-                                                              --  'MpuShield','NaeShield'
+                                                            --'CarnShield','NaeShield'
                                                               }
 	
     -- Adjust this if using the Terpander (new +song instrument)
@@ -194,7 +194,7 @@ function init_gear_sets()
 		ring1="Ephramad's ring", --STR +10, DEX +10, AGI +10, Acc/Att/Racc/Ratt +20, PDL +10
 		ring2="Metamorph ring +1",
         back=cha_wsd_cape, 
-		waist="Kentarch belt +1", 
+		waist="Sailfi belt +1", 
 		legs="Nyame flanchard", --Aug WSD+4/Att+12
 		feet="Nyame sollerets" --Aug WSD+6/Att+20
 	}
@@ -415,7 +415,7 @@ function init_gear_sets()
 		ear1="Regal earring", --CHR +10 (set bonus: +30 Acc/RAcc/MAcc)
 		ear2="Fili earring +2", --Sing +12, Enm -9, MND+7, CHR+7, MAcc +16, Acc +16, DT -6%
 		body="Fili hongreline +3", --CHR +48, Singing skill +24, Wind skill +24, Song dur +14%
-		hands="Fili manchettes +3",
+		hands="Brioso cuffs +4", --MAcc +58, CHR+41, set bonus
 		ring1="Stikini ring", --Magic skills +5, MAcc +8
 		ring2="Metamorph ring +1",
 		back=song_cape, --CHR+20, MAcc +30
@@ -423,7 +423,7 @@ function init_gear_sets()
 		legs="Inyanga shalwar +2", --CHR +32, MAcc +45, Song dur +17%
 		feet="Brioso slippers +4" --CHR +50, MAcc +56, Wind skill +15, Song dur +15% (set bonus: +30 Acc/RAcc/MAcc)
 	}
-	
+
     sets.midcast.Cure = {main="Daybreak",sub="Ammurapi shield",ammo="Pemphredo tathlum",
         head="Vanya hood",neck="Incanter's torque",ear1="Etiolation earring",ear2="Mendicant's earring",
         body="Inyanga jubbah +2",hands="Inyanga dastanas +2",ring1="Lebeche ring",ring2="Mephitas's ring +1",
@@ -476,7 +476,7 @@ function init_gear_sets()
 	sets.weapons.MpuGleti = {main="Mpu Gandring",sub="Gleti's knife"}
 	sets.weapons.MpuCent = {main="Mpu Gandring",sub="Centovente"}
 	sets.weapons.NaeShield = {main="Naegling",sub="Genbu's shield"}
-	sets.weapons.MpuShield = {main="Mpu Gandring",sub="Genbu's shield"}
+	sets.weapons.CarnShield = {main="Carnwenhan",sub="Genbu's shield"}
     
     -- Basic set for if no TP weapon is defined.
     sets.engaged = {

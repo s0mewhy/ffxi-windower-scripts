@@ -2,7 +2,7 @@ function get_sets()
 	
 	--ambu capes
 	tp_cape = { name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}}
-	dex_ws_cape = { name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}}
+	dex_wsd_cape = { name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}}
 	
 	-- JA Sets
 	sets.JA = {}
@@ -10,18 +10,18 @@ function get_sets()
 		head="Maxixi tiara +1",
 		back=tp_cape
 	}
-					
+
 	--Waltz potency + CHR
     sets.JA.Waltz = {ammo="Yamarang",
 		neck="Etoile gorget +2",
 		body="Maxixi casaque +1",ring1="Murky ring",
 		back=tp_cape,feet="Maxixi toe shoes +2"
 	}
-						
+
 	--High acc
     sets.JA.Step = {ammo="Yamarang",
-		head="Maxixi tiara +1",neck="Etoile gorget +2",ear1="Mache earring +1",ear2="Telos earring",
-		body="Maculele casaque +3",hands="Maxixi bangles",ring1="Regal ring",ring2="Chirich ring +1",
+		head="Maxixi tiara +1",neck="Etoile gorget +2",ear1="Telos earring",ear2="Maculele earring +1",
+		body="Maculele casaque +3",hands="Maxixi bangles +4",ring1="Moonlight ring",ring2="Moonlight ring",
 		back=tp_cape,waist="Sailfi belt +1",legs="Malignance tights",feet="Maculele toe shoes +3"
 	}
 
@@ -38,31 +38,51 @@ function get_sets()
 	sets.JA['No Foot Rise'] = {body="Horos casaque +1"}
 	
 	sets.WS = {}
-	sets.WS.default = {ammo="Oshasha's treatise",
-		head="Maculele tiara +3",neck="Etoile gorget +2",ear1="Sherida earring",ear2="Moonshade earring",
-		body="Nyame mail",hands="Nyame gauntlets",ring1="Ephramad's ring",ring2="Regal ring",
-		back=dex_ws_cape,waist="Sailfi belt +1",legs="Nyame flanchard",feet="Nyame sollerets"}
+	sets.WS.default = {ammo="Coiste bodhar",
+		head="Maculele tiara +3",neck="Etoile gorget +2",ear1="Moonshade earring",ear2="Maculele earring +1",
+		body="Nyame mail",hands="Maxixi bangles +4",ring1="Ephramad's ring",ring2="Regal ring",
+		back=dex_wsd_cape,waist="Sailfi belt +1",legs="Nyame flanchard",feet="Nyame sollerets"}
 	
+    --Midbuff sets
+    sets.WS["Aeolian Edge"] = {ammo="Ghastly Tathlum +1",
+		head="Nyame helm",neck="Etoile gorget +2",ear1="Moonshade earring",ear2="Friomisi earring",
+		body="Nyame mail",hands="Maxixi bangles +4",ring1="Ephramad's ring",ring2="Regal ring",
+		back=dex_wsd_cape,waist="Eschan stone",legs="Nyame flanchard",feet="Nyame sollerets"}
+
+    --Gleti set, charis feather(ammo)
+    sets.WS["Evisceration"] = {ammo="Coiste bodhar",
+		head="Blistering sallet +1",neck="Etoile gorget +2",ear1="Odr earring",ear2="Maculele earring +1",
+		body="Nyame mail",hands="Maxixi bangles +4",ring1="Gere ring",ring2="Regal ring",
+		back=dex_wsd_cape,waist="Fotia belt",legs="Nyame flanchard",feet="Nyame sollerets"}
+
+    sets.WS["Pyrrhic Kleos"] = {ammo="Coiste bodhar",
+		head="Maculele tiara +3",neck="Fotia gorget",ear1="Sherida earring",ear2="Maculele earring +1",
+		body="Nyame mail",hands="Maxixi bangles +4",ring1="Gere ring",ring2="Regal ring",
+		back=dex_wsd_cape,waist="Fotia belt",legs="Nyame flanchard",feet="Nyame sollerets"}
+
+    sets.WS["Rudra's Storm"] = {ammo="Coiste bodhar",
+		head="Maculele tiara +3",neck="Etoile gorget +2",ear1="Moonshade earring",ear2="Maculele earring +1",
+		body="Nyame mail",hands="Maxixi bangles +4",ring1="Ephramad's ring",ring2="Regal ring",
+		back=dex_wsd_cape,waist="Kentarch belt +1",legs="Nyame flanchard",feet="Nyame sollerets"}
+	
+    sets.WS["Ruthless Stroke"] = {ammo="Cath palug stone",
+		head="Maculele tiara +3",neck="Etoile gorget +2",ear1="Moonshade earring",ear2="Maculele earring +1",
+		body="Nyame mail",hands="Maxixi bangles +4",ring1="Ephramad's ring",ring2="Regal ring",
+		back=dex_wsd_cape,waist="Sailfi belt +1",legs="Nyame flanchard",feet="Nyame sollerets"}
 	
     sets.tp = {}
-	sets.tp.dd = {ammo="Yamarang",
-		head="Maculele tiara +3",neck="Etoile gorget +2",ear1="Sherida earring",ear2="Telos earring",
-		body="Maculele casaque +3",hands="Malignance gloves",ring1="Ilabrat ring",ring2="Chirich ring +1",
+	sets.tp.dd = {ammo="Coiste bodhar",
+		head="Maculele tiara +3",neck="Etoile gorget +2",ear1="Telos earring",ear2="Sherida earring",
+		body="Maculele casaque +3",hands="Malignance gloves",ring1="Ilabrat ring",ring2="Moonlight ring",
 		back=tp_cape,waist="Reiki yotai",legs="Malignance tights",feet="Maculele toe shoes +3"}
 	
     sets.status = {}
     sets.status.Engaged = sets.tp.dd
     
-    sets.status.Idle = {ammo="Mantoptera eye",
+    sets.status.Idle = {ammo="Staunch tathlum +1",
 		head="Nyame helm",neck="Bathy choker +1",ear1="Infused earring",ear2="Eabani earring",
 		body="Nyame mail",hands="Maculele bangles +3",ring1="Murky ring",ring2="Shneddick ring",
 		back="Archon cape",waist="Carrier's sash",legs="Nyame flanchard",feet="Maculele toe shoes +3"}
-	
-	sets.fashion = {}
-	sets.fashion.empy = {
-		head="Maculele tiara +3",body="Maculele casaque +3",hands="Maculele bangles +3",
-		legs="Maculele tights +3",feet="Maculele toe shoes +3"}
-
 	
     set_macro_book()
 	fashion_particulars()
@@ -75,7 +95,7 @@ end
 
 -- Equip fashion set, turn on lockstyle, and then equip idle set
 function fashion_particulars()
-	send_command('wait 1;input /lockstyleset 31;wait 1;gs equip sets.idle')
+	send_command('wait 1;input /lockstyleset 23;wait 1;gs equip sets.status.Idle')
 end
 
 function sub_job_change(new,old)
