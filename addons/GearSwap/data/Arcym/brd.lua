@@ -52,7 +52,6 @@ function user_setup()
     state.OffenseMode:options('None', 'Normal')
     state.CastingMode:options('Normal', 'Resistant')
 	
-	--brd_daggers = S{'Kali', 'Twashtar', 'Carnwenhan', "Gleti's Knife", 'Centovente', 'Aeneas', 'Tauret', 'Naegling'}
 	pick_tp_weapon()
 	
     state.Mainhand = M{['description']='Main weapon', "Mpu gandring", "Naegling", "Carnwenhan"}
@@ -65,13 +64,7 @@ function user_setup()
     
     -- Set this to false if you don't want to use custom timers.
     state.UseCustomTimers = M(false, 'Use Custom Timers')
-	    
-    -- Additional local binds
-    --	send_command('bind ^` gs c cycle ExtraSongsMode')
-    --	send_command('bind !` input /ma "Chocobo Mazurka" <me>')
 	
-	brd_daggers = ""
-
     select_default_macro_book()
 	fashion_particulars()
     add_to_chat(state.Mainhand.description .. ' is: ' .. state.Mainhand.value)
