@@ -55,9 +55,8 @@ function user_setup()
 	--brd_daggers = S{'Kali', 'Twashtar', 'Carnwenhan', "Gleti's Knife", 'Centovente', 'Aeneas', 'Tauret', 'Naegling'}
 	pick_tp_weapon()
 	
-	state.CombatWeapon = M{['description']='Weapon Selection', 'MpuGleti', 'NaeGleti'
-                                                            --'CarnShield','NaeShield'
-                                                              }
+    state.Mainhand = M{['description']='Main weapon', "Mpu gandring", "Naegling", "Carnwenhan"}
+    state.Offhand = M{['description']='Offhand', "Centovente", "Gleti's knife", "Genbu's shield"}
 	
     -- Adjust this if using the Terpander (new +song instrument)
     info.ExtraSongInstrument = 'Daurdabla'
@@ -75,6 +74,8 @@ function user_setup()
 
     select_default_macro_book()
 	fashion_particulars()
+    add_to_chat(state.Mainhand.description .. ' is: ' .. state.Mainhand.value)
+    add_to_chat(state.Offhand.description .. ' is: ' .. state.Offhand.value)
 end
 
 
@@ -466,18 +467,7 @@ function init_gear_sets()
     -- sets if more refined versions aren't defined.
     -- If you create a set with both offense and defense modes, the offense mode should be first.
     -- EG: sets.engaged.Dagger.Accuracy.Evasion
-	
-	--------------------------------------
-	-- Weapons
-	--------------------------------------
-	sets.weapons = {}
-	sets.weapons.NaeGleti = {main="Naegling",sub="Gleti's knife"}
-	sets.weapons.NaeCent = {main="Naegling",sub="Centovente"}
-	sets.weapons.MpuGleti = {main="Mpu Gandring",sub="Gleti's knife"}
-	sets.weapons.MpuCent = {main="Mpu Gandring",sub="Centovente"}
-	sets.weapons.NaeShield = {main="Naegling",sub="Genbu's shield"}
-	sets.weapons.CarnShield = {main="Carnwenhan",sub="Genbu's shield"}
-    
+	  
     -- Basic set for if no TP weapon is defined.
     sets.engaged = {
 		range={ name="Linos", augments={'Attack+16','"Dbl.Atk."+2','Quadruple Attack +3',}},
@@ -622,7 +612,7 @@ function customize_idle_set(idleSet)
         idleSet = set_combine(idleSet, sets.buff.Doom)
     end
 
-    idleSet = set_combine(idleSet, sets.weapons[state.CombatWeapon.value])
+    idleSet = set_combine(idleSet, {main=state.Mainhand.value, sub=state.Offhand.value})
 
     return idleSet
 end
@@ -633,7 +623,7 @@ function customize_melee_set(meleeSet)
         meleeSet = set_combine(meleeSet, sets.buff.Doom)
     end
 	
-	meleeSet = set_combine(meleeSet, sets.weapons[state.CombatWeapon.value])
+	meleeSet = set_combine(meleeSet, {main=state.Mainhand.value, sub=state.Offhand.value})
     
     return meleeSet
 end
@@ -666,19 +656,6 @@ end
 
 -- Examine equipment to determine what our current TP weapon is.
 function pick_tp_weapon()
-    -- if brd_daggers:contains(player.equipment.main) then
-        -- state.CombatWeapon:set('Dagger')
-        
-        -- if S{'NIN','DNC'}:contains(player.sub_job) and brd_daggers:contains(player.equipment.sub) then
-            -- state.CombatForm:set('DW')
-        -- else
-            -- state.CombatForm:reset()
-        -- end
-    -- else
-        -- state.CombatWeapon:reset()
-        -- state.CombatForm:reset()
-    -- end
-	
 	if S{'NIN','DNC'}:contains(player.sub_job) then
 		state.CombatForm:set('DW')
 	end
@@ -705,17 +682,6 @@ function job_self_command(cmdParams, eventArgs)
 			send_command('wait 1;du blinking self all on;')
 		end
         eventArgs.handled = true
-	-- gs c 5songs
-	elseif cmdParams[1]:lower() == '5songs' then
-		send_command('@input /ma "Knight\'s Minne V" <me>;wait 6;\
-						input /ma "Knight\'s Minne IV" <me>;wait 6;\
-						input /ja "Clarion Call" <me>;wait 1;\
-						input /ma "Knight\'s Minne III" <me>;wait 6;\
-						input //gs c set ExtraSongsMode Dummy;wait 1;\
-						input /ma "Knight\'s Minne II" <me>;wait 6;\
-						input //gs c set ExtraSongsMode Dummy;wait 1;\
-						input /ma "Knight\'s Minne" <me>;')
-		eventArgs.handled = true
     end
 end
 
