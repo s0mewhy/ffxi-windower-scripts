@@ -203,7 +203,7 @@ function init_gear_sets()
     sets.midcast.Enmity = { --SIRD+93
 		ammo="Staunch tathlum +1", --SIRD+11
 		head="Souveran schaller +1", --Enmity+9, SIRD+20
-		neck="Moonlight necklace", --Enmity+10, SIRD+10
+		neck="Moonbeam necklace", --Enmity+10, SIRD+10
 		ear1="Cryptic earring", --Enmity+4
 		ear2="Knightly earring", --SIRD+9
 		body="Chevalier's cuirass +3", --Enmity+16, SIRD+20
@@ -225,7 +225,7 @@ function init_gear_sets()
 	--SIRD set, Cure Received caps at 30%, Cure Potency caps at 50%
 		ammo="Staunch tathlum +1", --11% SIRD
 		head="Souveran schaller +1", --20% SIRD, 15% Cure received
-		neck="Moonlight necklace", --10% SIRD
+		neck="Moonbeam necklace", --10% SIRD
 		ear1="Nourishing earring +1", --6% Potency, 3/5% SIRD
 		ear2="Chevalier's earring +2", --12% Potency 
 		body="Souveran cuirass +1", --15% Cure received, 11% Potency, Enmity+9

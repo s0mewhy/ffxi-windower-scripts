@@ -54,8 +54,8 @@ function user_setup()
 	
 	pick_tp_weapon()
 	
-    state.Mainhand = M{['description']='Main weapon', "Mpu gandring", "Naegling", "Carnwenhan"}
-    state.Offhand = M{['description']='Offhand', "Centovente", "Gleti's knife", "Genbu's shield"}
+    state.Mainhand = M{['description']='Main weapon',"Naegling","Mpu gandring","Carnwenhan"}
+    state.Offhand = M{['description']='Offhand',"Centovente","Gleti's knife","Genbu's shield","Ammurapi shield"}
 	
     -- Adjust this if using the Terpander (new +song instrument)
     info.ExtraSongInstrument = 'Daurdabla'
