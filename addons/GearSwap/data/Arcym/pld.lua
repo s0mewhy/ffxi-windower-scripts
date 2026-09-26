@@ -187,7 +187,7 @@ function init_gear_sets()
     --range="kaja bow",
     ammo="Staunch tathlum +1",
     head="Souveran schaller +1",
-	neck="Moonlight necklace",
+	neck="Moonbeam necklace",
 	ear1="Etiolation earring",
     ear2="Chevalier's earring +2", --"Loquacious Earring", --2% FC
     body="Sakpata's plate",
@@ -258,7 +258,7 @@ function init_gear_sets()
     sets.midcast['Enhancing Magic'] = {
 		ammo="Staunch tathlum +1",
 		head="Souveran schaller +1",
-		neck="Moonlight necklace",
+		neck="Moonbeam necklace",
 		ear1="Andoaa earring",
 		--ear2="Tuisto Earring",
 		--body="Shabti Cuirass",
@@ -279,7 +279,7 @@ function init_gear_sets()
     hands="Souveran handschuhs +1",
     legs="Sakpata's cuisses",
     feet="Souveran schuhs +1",
-    neck="Moonlight necklace",
+    neck="Moonbeam necklace",
     waist="Audumbla sash",
     left_ear="Andoaa earring",
     right_ear="Tuisto earring",
