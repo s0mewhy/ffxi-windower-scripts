@@ -55,8 +55,13 @@ function user_setup()
 	pick_tp_weapon()
 	
     state.Mainhand = M{['description']='Main weapon',"Naegling","Mpu gandring","Mpaca's staff","Carnwenhan"}
-    state.Offhand = M{['description']='Offhand',"Centovente","Gleti's knife","Genmei shield","Ammurapi shield","Enki strap"}
-	
+
+    if state.CombatForm.value == 'DW' then
+        state.Offhand = M{['description']='Offhand',"Centovente","Gleti's knife","Enki strap"}
+	else
+        state.Offhand = M{['description']='Offhand',"Genmei shield","Ammurapi shield","Enki strap"}
+    end
+
     -- Adjust this if using the Terpander (new +song instrument)
     info.ExtraSongInstrument = 'Daurdabla'
     -- How many extra songs we can keep from Daurdabla/Terpander
@@ -67,6 +72,7 @@ function user_setup()
 	
     select_default_macro_book()
 	fashion_particulars()
+    add_to_chat(state.CombatForm.description .. ' is: ' .. state.CombatForm.value)
     add_to_chat(state.Mainhand.description .. ' is: ' .. state.Mainhand.value)
     add_to_chat(state.Offhand.description .. ' is: ' .. state.Offhand.value)
 end
@@ -665,6 +671,8 @@ end
 function pick_tp_weapon()
 	if S{'NIN','DNC'}:contains(player.sub_job) then
 		state.CombatForm:set('DW')
+    else
+        state.CombatForm:reset()
 	end
 end
 
