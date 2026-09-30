@@ -54,8 +54,8 @@ function user_setup()
 	
 	pick_tp_weapon()
 	
-    state.Mainhand = M{['description']='Main weapon',"Naegling","Mpu gandring","Carnwenhan"}
-    state.Offhand = M{['description']='Offhand',"Centovente","Gleti's knife","Genbu's shield","Ammurapi shield"}
+    state.Mainhand = M{['description']='Main weapon',"Naegling","Mpu gandring","Mpaca's staff","Carnwenhan"}
+    state.Offhand = M{['description']='Offhand',"Centovente","Gleti's knife","Genmei shield","Ammurapi shield","Enki strap"}
 	
     -- Adjust this if using the Terpander (new +song instrument)
     info.ExtraSongInstrument = 'Daurdabla'
@@ -243,9 +243,23 @@ function init_gear_sets()
 		legs="Nyame flanchard", --Aug WSD+4/Att+12
 		feet="Nyame sollerets" --Aug WSD+6/Att+20
 	}
-    
 
-	
+    sets.precast.WS["Shell Crusher"] = {
+		range={ name="Linos", augments={'Attack+16','"Dbl.Atk."+2','Quadruple Attack +3',}},
+        head="Brioso roundlet +4",
+		neck="Moonbow whistle +1", 
+		ear1="Regal earring", 
+		ear2="Fili earring +2", 
+        body="Fili hongreline +3", 
+		hands="Brioso cuffs +4",
+		ring1="Stikini ring", 
+		ring2="Metamorph ring +1", 
+        back=song_cape,
+		waist="Null belt",
+		legs="Fili rhingrave +3", 
+		feet="Brioso slippers +4"
+	}
+
     -- Midcast Sets
 
     -- General set for recast times.

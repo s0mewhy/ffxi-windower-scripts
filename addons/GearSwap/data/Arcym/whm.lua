@@ -43,21 +43,22 @@ function init_gear_sets()
 	
     -- Fast cast sets for spells
 	-- FC cap 80, Light Arts gives 10 FC
-	-- FC 74(cap 80), Haste 26(cap 25), QM=5
+	-- FC 81/80, Haste 20/25, QM=7
 	sets.precast.FC = {main="Grioavolr", --FC 10
-		sub="Umbra strap",ammo="Impatiens", --QM 2
-		head="Ebers cap +3", --FC 13
-		neck="Cleric's torque +2", --(not done)FC 2 
-		ear1="Etiolation earring", --FC 1
+		sub="Wizzan grip", --Conserve MP+1
+        ammo="Impatiens", --QM 2
+		head="Ebers cap +3", --FC 13, Haste+6
+		neck="Cleric's torque +2", --FC 10
+		ear1="Gifted earring", --Conserve MP+3
 		ear2="Malignance earring", --FC 4
-		body="Inyanga jubbah +2", --FC 14
-		hands="Gendewitha gages +1", --FC 7
-		ring1="Murky ring",ring2="Kishar ring", --FC 4
+		body="Inyanga jubbah +2", --FC 14, Haste+2
+		hands="Gendewitha gages +1", --FC 7, Haste+1
+		ring1="Lebeche ring", --QM 2
+        ring2="Kishar ring", --FC 4
 		back="Fi follet cape +1", --FC 10
-		waist="Witful belt", --FC 3, QM 3
-		legs="Ebers pantaloons +3", --DT
-		feet="Volte gaiters"} --FC 6
-        --Lebeche ring for Quick Magic
+		waist="Witful belt", --FC 3, QM 3, Haste+3
+		legs="Ebers pantaloons +3", --DT, Haste+5
+		feet="Volte gaiters"} --FC 6, Haste+3
 		
     sets.precast.FC.StatusRemoval = sets.precast.FC
 	-- Divine Benison (FC/Enmity down for -na spells)
@@ -294,8 +295,8 @@ function init_gear_sets()
     -- Idle sets (default idle set not needed since the other three are defined)
 	-- PDT 53/50, MDT 51/50, Refresh 4~5, Regen 2
 	sets.idle = {
-		main="Daybreak", --Refresh +1, MEva +30, Main hand: Dispelga
-		sub="Genmei shield", --PDT -10%, Eva +10
+		main="Mpaca's staff", --Refresh +2
+		sub="Oneiros grip", --Regen+1, refresh+1 if MP<75%
 		ammo="Homiliary", --Refresh +1
 		head="Bunzi's hat", --DT -7, MEva+123
 		--neck="Bathy choker +1", --Regen +3, Eva
