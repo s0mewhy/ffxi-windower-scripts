@@ -243,7 +243,7 @@ function init_gear_sets()
         body="Bihu justaucorps +4", 
 		hands="Nyame gauntlets", --STR +17, MND +40, Acc +40, Att +30, SC bonus +5
 		ring1="Ephramad's ring", --STR +10, DEX +10, AGI +10, Acc/Att/Racc/Ratt +20, PDL +10
-		ring2="Ilabrat ring", --DEX +10, Store TP +5, Att +25
+		ring2="Sroda ring", --PDL +3
         back=str_wsd_cape, 
 		waist="Sailfi belt +1", 
 		legs="Nyame flanchard", --Aug WSD+4/Att+12
@@ -408,13 +408,13 @@ function init_gear_sets()
     sets.midcast.DaurdablaDummy = {main="",range=info.ExtraSongInstrument,
 		head="Vanya hood",neck="Loricate torque +1",ear1="Etiolation earring",ear2="Ethereal earring",
 		body="Inyanga jubbah +2",hands="Gendewitha gages +1",ring1="Murky ring",ring2="Kishar ring",
-		back="Fi follet cape +1",waist="Embla sash",legs="Ayanmo cosciales +2",feet="Ayanmo gambieras +2"}
+		back="Fi follet cape +1",waist="Embla sash",legs="Ayanmo cosciales +2",feet="Brioso slippers +4"}
 
     -- Other general spells and classes.
 	sets.midcast['Enhancing Magic'] = {sub="Ammurapi shield",ammo="Pemphredo tathlum",
 		head="Vanya hood",neck="Incanter's torque",ear1="Mimir earring",ear2="Ethereal earring",
 		body="Inyanga jubbah +2",hands="Inyanga dastanas +2",ring1="Stikini ring",ring2="Stikini ring",
-		back="Fi follet cape +1",waist="Embla sash",legs=enh_telchine_legs,feet="Ayanmo gambieras +2"}
+		back="Fi follet cape +1",waist="Embla sash",legs=enh_telchine_legs,feet="Brioso slippers +4"}
 		
 	sets.midcast['Enfeebling Magic'] = sets.midcast.SongDebuff
 	

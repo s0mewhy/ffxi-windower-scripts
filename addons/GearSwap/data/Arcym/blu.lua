@@ -564,15 +564,11 @@ function init_gear_sets()
     sets.engaged.Learning = set_combine(sets.engaged, sets.Learning)
     -- sets.engaged.DW.Learning = set_combine(sets.engaged.DW, sets.Learning)
 
-
     -- sets.self_healing = {ring1="Kunaji Ring",ring2="Asklepian Ring"}
 	
 	-- Fashion sets
 	sets.fashion = {}
-	
-	-- sets.fashion.af = {
-		-- head="Assimilator's keffiyeh +2",body="Assimilator's jubbah +2",hands="Luhlaza bazubands +1",
-		-- legs="Assimilator's shalwar +2",feet="Luhlaza charuqs +1"}
+
 end
 
 -- Select default macro book on initial load or subjob change.
