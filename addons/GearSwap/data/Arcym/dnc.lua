@@ -105,8 +105,20 @@ end
 
 function precast(spell)
 --    code here to cancel buffs that don't automatically overwrite themselves
-	if spell.name == 'Spectral Jig' and buffactive.sneak then
-        windower.ffxi.cancel_buff(71)
+    if spell.english == 'Spectral Jig' and buffactive.sneak then
+        send_command('cancel sneak')
+    elseif spell.english == 'Sneak' and spell.target.type == 'SELF' and buffactive.sneak then
+        send_command('cancel sneak')
+    elseif spell.english == ('Stoneskin') then
+        send_command('@wait 1.0;cancel stoneskin')
+    elseif spell.english:startswith('Monomi') then
+        send_command('@wait 1.7;cancel sneak')
+    elseif spell.english == 'Utsusemi: Ichi' then
+        send_command('@wait 1.7;cancel copy image,copy image (2)')
+    elseif (spell.english == 'Trance' or spell.type=='Waltz') and buffactive['saber dance'] then
+        send_command('cancel saber dance')
+    elseif spell.type=='Samba' and buffactive['fan dance'] then
+        send_command('cancel fan dance')
     end
 end
 
