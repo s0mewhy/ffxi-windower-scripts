@@ -53,9 +53,8 @@ function user_setup()
     state.CastingMode:options('Normal', 'Resistant')
 	
 	pick_tp_weapon()
-	
-    state.Mainhand = M{['description']='Main weapon',"Naegling","Mpu gandring","Mpaca's staff","Carnwenhan"}
-
+	state.Mainhand = M{['description']='Main weapon',"Naegling","Mpu gandring","Mpaca's staff","Carnwenhan"}
+    
     if state.CombatForm.value == 'DW' then
         state.Offhand = M{['description']='Offhand',"Centovente","Gleti's knife","Enki strap"}
 	else
@@ -596,6 +595,7 @@ end
 
 -- Handle notifications of general user state change.
 function job_state_change(stateField, newValue, oldValue)
+
     if stateField == 'Offense Mode' then
         if newValue == 'Normal' then
             disable('main','sub','ammo')
@@ -626,7 +626,7 @@ function customize_idle_set(idleSet)
     end
 
     idleSet = set_combine(idleSet, {main=state.Mainhand.value, sub=state.Offhand.value})
-
+    
     return idleSet
 end
 
