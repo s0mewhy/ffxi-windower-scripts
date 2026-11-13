@@ -303,13 +303,12 @@ function job_buff_change(buff,gain)
 	if string.match(buff, 'Roll') then
 		if not gain then
             rollname = string.sub(buff, 1, -6)
-            add_to_chat(167, 'lost: '..rollname)
             active11rolls[rollname] = nil
-            add_to_chat(167, 'active11rolls: '..dump(active11rolls))
+            add_to_chat(167, 'lost: '..rollname..'. Active 11 rolls: : '..dump(active11rolls))
             if count(active11rolls) == 0 then
                 state.RollersRing:set(false)
-			    add_to_chat(167, 'Active 11 rolls: '..dump(active11rolls)..', Roller\'s ring = [OFF]')
                 handle_equipping_gear(player.status)
+			    add_to_chat(167, 'Active 11 rolls: '..dump(active11rolls)..', Roller\'s ring = [OFF]')
             end
 		end
 	end
@@ -553,7 +552,7 @@ function customize_idle_set(idleSet)
 	
 	idleSet = set_combine(idleSet, sets.weapons[state.CombatWeapon.value])
 
-    if state.RollersRing.value then
+    if sets.RollersRing and state.RollersRing.value then
         idleSet = set_combine(idleSet, sets.RollersRing)
     end
 
@@ -595,8 +594,10 @@ windower.register_event('action', function(act)
                 state.RollersRing:set(true)
                 rollname = rollInfo[rollID][1]
                 active11rolls[rollname] = true
-                equip(sets.RollersRing)
-                add_to_chat(167, 'Active 11 rolls: '..dump(active11rolls)..', Roller\'s ring = [ON]')
+                if sets.RollersRing then
+                    equip(sets.RollersRing)
+                    add_to_chat(167, 'Active 11 rolls: '..dump(active11rolls)..', Roller\'s ring = [ON]')
+                end
             end
         end
     end

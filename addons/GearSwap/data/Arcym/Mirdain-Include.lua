@@ -63,11 +63,7 @@ state = state or {}
 Ammo_Warning_Limit = 99
 
 -- Required gear set.  Expand this in the job file when defining sets.
-sets.TreasureHunter = {
-	ammo="Per. Lucky Egg",
-    legs="Volte Hose",
-    waist="Chaac Belt",
-}
+sets.TreasureHunter = {}
 
 -- Default gearsets. Expand this in the job file when defining sets.
 sets.WS = {}
@@ -82,6 +78,58 @@ sets.Samba = {}
 sets.Step = {}
 sets.Flourish = {}
 sets.Pet_Midcast = {}
+sets.RollersRing = {}
+
+-- track active 11 rolls, for Roller's ring
+state.RollersRing = M{['description']='Roller\'s Ring'}
+state.RollersRing:options('OFF','ON')
+state.RollersRing:set('OFF')
+
+buffId = S{309} + S(gearswap.res.buffs:english(string.endswith-{' Roll'})):map(table.get-{'id'})
+
+local rollInfoTemp = {
+    -- Okay, this goes 1-11 boost, Bust effect, Effect, Lucky, Unlucky, +1 Phantom Roll Effect, Job Bonus, Bonus Equipment and Effect,
+    ['Allies\''] = {6,7,17,9,11,13,15,17,17,5,17,'?','% Skillchain Damage',3,10, 1,{nil,0},{6,11120, 27084, 27085, 5}},--Needs Eval
+    ['Avenger\'s'] = {'?','?','?','?','?','?','?','?','?','?','?','?',' Counter Rate',4,8, 0,{nil,0}},
+    ['Beast'] = {64,80,96,256,112,128,160,32,176,192,320,'0','% Pet: Attack Bonus',4,8, 32,{'bst',100}},--/1024 Confirmed
+    ['Blitzer\'s'] = {2,3.4,4.5,11.3,5.3,6.4,7.2,8.3,1.5,10.2,12.1,'-3','% Attack delay reduction',4,9, 1,{nil,0},{4,11080, 26772, 26773, 5}},--Limited Testing for Bust, Needs more data for sure probably /1024
+    ['Bolter\'s'] = {0.3,0.3,0.8,0.4,0.4,0.5,0.5,0.6,0.2,0.7,1.0,'0','% Movement Speed',3,9, 0.2,{nil,0}},
+    ['Caster\'s'] = {6,15,7,8,9,10,5,11,12,13,20,'-10','% Fast Cast',2,7, 3,{nil,0},{7, 11140, 27269, 27269, 10}},
+    ['Chaos'] = {64,80,96,256,112,128,160,32,176,192,320,"-9.76",'% Attack!', 4,8, 32,{'drk',100}},--/1024 Confirmed
+    ['Choral'] = {8,42,11,15,19,4,23,27,31,35,50,'+25','- Spell Interruption Rate',2,6, 4,{'brd',25}},--SE listed Values and hell if I'm testing this
+    ['Companion\'s'] = {{4,20},{20,50},{6,20},{8,20},{10,30},{12,30},{14,30},{16,40},{18,40},{3,10},{25,60},'0',' Pet: Regen/Regain',2,10, {2,5},{nil,0}},
+    ['Corsair\'s'] = {10, 11, 11, 12, 20, 13, 15, 16, 8, 17, 24,'-6','% Experience Bonus',5,9, 2,{'cor',5}},--Needs Eval on Bust/Job Bonus
+    ['Courser\'s'] = {'?','?','?','?','?','?','?','?','?','?','?','?',' Snapshot',3,9, 0,{nil,0}}, --11160, 27443, 27444
+    ['Dancer\'s'] = {3,4,12,5,6,7,1,8,9,10,16,'-4',' Regen',3,7, 2,{'dnc',4}},--Confirmed
+    ['Drachen'] = {10,13,15,40,18,20,25,5,28,30,50,'0',' Pet: Accuracy Bonus',4,8, 5,{'drg',15}},--Confirmed
+    ['Evoker\'s'] = {1,1,1,1,3,2,2,2,1,3,4,'-1',' Refresh!',5,9, 1,{'smn',1}},--Confirmed
+    ['Fighter\'s'] = {2,2,3,4,12,5,6,7,1,9,18,'-4','% Double-Attack!',5,9, 1,{'war',5}},
+    ['Gallant\'s'] = {48,60,200,72,88,104,32,120,140,160,240,'-11.72','% Defense Bonus',3,7, 24,{'pld',120}},--/1024 Confirmed
+    ['Healer\'s'] = {3,4,12,5,6,7,1,8,9,10,16,'-4','% Cure Potency Received',3,7, 1,{'whm',4}},--Confirmed
+    ['Hunter\'s'] = {10,13,15,40,18,20,25,5,28,30,50,'-15',' Accuracy Bonus',4,8, 5,{'rng',15}},--Confirmed
+    ['Magus\'s'] = {5,20,6,8,9,3,10,13,14,15,25,'-8',' Magic Defense Bonus',2,6, 2,{'blu',8}},
+    ['Miser\'s'] = {30,50,70,90,200,110,20,130,150,170,250,'0',' Save TP',5,7, 15,{nil,0}},
+    ['Monk\'s'] = {8,10,32,12,14,15,4,20,22,24,40,'-?',' Subtle Blow', 3,7, 4,{'mnk',10}},
+    ['Naturalist\'s'] = {6,7,15,8,9,10,5,11,12,13,20,'-5','% Enhancing Magic Duration',3,7, 1,{'geo',5}},--Confirmed
+    ['Ninja'] = {10,13,15,40,18,20,25,5,28,30,50,'-15',' Evasion Bonus',4,8, 5,{'nin',15}},--Confirmed
+    ['Puppet'] = {5,8,35,11,14,18,2,22,26,30,40,'-8',' Pet: MAB/MAcc',3,7, 3,{'pup',12}},
+    ['Rogue\'s'] = {2,2,3,4,12,5,6,6,1,8,14,'-6','% Critical Hit Rate!',5,9, 1,{'thf',5}},
+    ['Runeist\'s'] = {10,13,15,40,18,20,25,5,28,30,50,'-15',' Evasion Bonus',4,8, 5,{'run',15}},--Needs Eval
+    ['Samurai'] = {8,32,10,12,14,4,16,20,22,24,40,'-10',' Store TP Bonus',2,6, 4,{'sam',10}},--Confirmed 1(Was bad),2,3,4,5,6,7,8,11 (I Wing Test)
+    ['Scholar\'s'] = {2,10,3,4,4,1,5,6,7,7,12,'-3','% Conserve MP',2,6, 1,{'sch',3}}, --Needs Eval Source ATM: JP Wiki
+    ['Tactician\'s'] = {10,10,10,10,30,10,10,0,20,20,40,'-10',' Regain',5,8, 2,{nil,0},{5, 11100, 26930, 26931, 10}},--Confirmed
+    ['Warlock\'s'] = {10,13,15,40,18,20,25,5,28,30,50,'-15',' Magic Accuracy Bonus',4,8, 5,{'rdm',15}},--
+    ['Wizard\'s'] = {4,6,8,10,25,12,14,17,2,20,30, "-10",' MAB',5,9, 2,{'blm',10}},
+}
+
+rollInfo = {}
+for key, val in pairs(rollInfoTemp) do
+    rollInfo[gearswap.res.job_abilities:with('english', key .. ' Roll').id] = {key, unpack(val)}
+end
+    
+-- track active 11 rolls so we know when to remove roller's ring
+active11rolls = {}
+
 
 --Modes for Melee
 state.OffenseMode = M{['description']='Melee Mode'}
@@ -157,12 +205,13 @@ function display_box_update()
 	dialog[1] = {description = 'Stance', value = state.OffenseMode.value}
 	dialog[2] = {description = 'TH Mode', value = state.TreasureMode.value}
 	dialog[3] = {description = 'Auto Buff', value = state.AutoBuff.value}
-	dialog[4] = {description = 'DPS', value = state.WeaponMode.value}
+    dialog[4] = {description = 'Roller\'s Ring', value = state.RollersRing.value}
+	dialog[5] = {description = 'DPS', value = state.WeaponMode.value}
 	if UI_Name ~= "" then
-		dialog[5] = {description = UI_Name, value = state.JobMode.value}
+		dialog[6] = {description = UI_Name, value = state.JobMode.value}
 	end
 	if UI_Name2 ~= "" then
-		dialog[6] = {description = UI_Name2, value = state.JobMode2.value}
+		dialog[7] = {description = UI_Name2, value = state.JobMode2.value}
 	end
 	lines = T{}
     for k, v in next, dialog do
@@ -1307,7 +1356,8 @@ end
 -------------------------------------------------------------------------------------------------------------------
 
 function precast(spell)
-	equipSet = {}
+
+    equipSet = {}
 	if buffactive['Sleep'] then
 		cancel_spell()	
 		log('Cancel Spell - Player is asleep')
@@ -1340,6 +1390,23 @@ function precast(spell)
 		cancel_spell()
 		return
 	end
+
+    -- cancel buffs that conflict with the spell being used
+    if spell.english == 'Spectral Jig' and buffactive.sneak then
+        send_command('cancel sneak')
+    elseif spell.english == 'Sneak' and spell.target.type == 'SELF' and buffactive.sneak then
+        send_command('cancel sneak')
+    elseif spell.english == ('Stoneskin') then
+        send_command('@wait 1.0;cancel stoneskin')
+    elseif spell.english:startswith('Monomi') then
+        send_command('@wait 1.7;cancel sneak')
+    elseif spell.english == 'Utsusemi: Ichi' then
+        send_command('@wait 1.7;cancel copy image,copy image (2)')
+    elseif (spell.english == 'Trance' or spell.type=='Waltz') and buffactive['saber dance'] then
+        send_command('cancel saber dance')
+    elseif spell.type=='Samba' and buffactive['fan dance'] then
+        send_command('cancel fan dance')
+    end
 
 	--Generate the correct set from the include file and custom function
 	equipSet = set_combine(precastequip (spell), precast_custom(spell))
@@ -1429,6 +1496,19 @@ end
 -------------------------------------------------------------------------------------------------------------------
 
 function buff_change(name,gain)
+    -- keep track of 11 rolls wearing off, for Roller's ring
+	if string.match(name, 'Roll') then
+        if not gain then
+            rollname = string.sub(name, 1, -6)
+            active11rolls[rollname] = nil
+            add_to_chat(167, 'lost: '..rollname..'. Active 11 rolls: : '..dump(active11rolls))
+            if count(active11rolls) == 0 then
+                state.RollersRing:set("OFF")
+		        add_to_chat(167, 'Active 11 rolls: '..dump(active11rolls)..', Roller\'s ring = [OFF]')
+            end
+        end 
+	end
+
 	equipSet = {}
 	if is_Busy == false then
 		--calls the include file and custom on a buff change
@@ -1561,6 +1641,12 @@ function choose_set()
 			end
 		end
 
+        if state.RollersRing.value == "ON" then
+            if state.OffenseMode.value == "Aminon" or state.OffenseMode.value == "TPRegain" then
+                equipSet = set_combine(equipSet, sets.RollersRing)
+            end
+        end
+
 	-- Idle sets
 	else
 		-- Weapon Checks
@@ -1577,10 +1663,15 @@ function choose_set()
 		if buffactive[187] then
 			equipSet = set_combine(equipSet, sets.Idle.Sublimation)
 		end
-		-- Equip movement gear
-		if is_moving == true then
-			equipSet = set_combine(equipSet, sets.Movement)
-		end
+
+        if state.RollersRing.value == "ON" then
+            equipSet = set_combine(equipSet, sets.RollersRing)
+        end
+
+        -- Equip movement gear
+		--if is_moving == true and player.main_job ~= "COR" then
+			--equipSet = set_combine(equipSet, sets.Movement)
+		--end
 	end
 	return equipSet
 end
@@ -2335,6 +2426,7 @@ end)
 windower.register_event('lose buff', function(id)
     local name = All_Buffs[id].english
 	local gain = false
+
 	if id == 15 then
 		enable('neck','lring','rring','waist')
 		equipSet = set_combine(choose_set(), choose_set_custom(), buff_change_custom(name,gain))
@@ -2696,3 +2788,57 @@ function run_burst(data)
 		end
 	end
 end
+
+-- number of items in a table
+function count(table)
+    local count = 0
+    for _ in pairs(table) do 
+        count = count + 1 
+    end
+    return count
+end
+
+--debugging function for printing a table
+function dump(o)
+   if type(o) == 'table' then
+      local s = '{ '
+      for k,v in pairs(o) do
+         if type(k) ~= 'number' then k = '"'..k..'"' end
+         s = s .. '['..k..'] = ' .. dump(v) .. ','
+      end
+      return s .. '} '
+   else
+      return tostring(o)
+   end
+end
+
+-- event to check if you're receiving a COR roll of 11 (for Roller's Ring)
+windower.register_event('action', function(act)
+    if act.category == 6 and table.containskey(rollInfo, act.param) then
+        --This is used later to allow/disallow busting
+        --If you are not the rollActor you will not be disallowed to bust.
+        rollActor = act.actor_id
+        local rollID = act.param
+        local rollNum = act.targets[1].actions[1].param
+
+        if rollNum == 11 then 
+            -- anonymous function that checks if the player.id is in the targets without wrapping it in another layer of for loops.
+            if
+                function(act)
+                    for i = 1, #act.targets do
+                        if act.targets[i].id == player.id then
+                            return true
+                        end
+                    end
+                    return false
+                end(act)
+            then
+                state.RollersRing:set("ON")
+                rollname = rollInfo[rollID][1]
+                active11rolls[rollname] = true
+                equip(sets.RollersRing)
+                add_to_chat(167, 'Active 11 rolls: '..dump(active11rolls)..', Roller\'s ring = [ON]')
+            end
+        end
+    end
+end)

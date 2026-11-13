@@ -21,7 +21,7 @@ Lockstyle_List = {110,110,110}
 Food = "Sublime Sushi +1"
 
 -- 'TP','ACC','DT' are standard Default modes.  You may add more and assigne equipsets for them
-state.OffenseMode:options('DT','DTRollers','TP','TPRegain','SB','Aminon','AminonRollers') -- ACC effects WS and TP modes
+state.OffenseMode:options('DT','TP','TPRegain','SB','Aminon') -- ACC effects WS and TP modes
 state.OffenseMode:set('DT')
 
 state.WeaponMode:options('Terpsichore','Twashtar','Aeneas Cento','Tauret','Aeneas Tauret','Mpu Gandring','Karambit')
@@ -59,22 +59,6 @@ function get_sets()
 		right_ring="Karieyh Ring",
 		back="Null Shawl",
 	}
-
-	sets.Idle.DTRollers = {
-		ammo="Staunch Tathlum +1",
-		head="Nyame Helm",
-		body="Adamantite Armor",
-		hands="Nyame Gauntlets",
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
-		neck="Loricate Torque +1",
-		waist="Engraved belt",
-		left_ear="Odnowa Earring +1",
-		right_ear="Alabaster Earring",
-		left_ring="Roller's Ring",
-		right_ring="Karieyh Ring",
-		back="Null Shawl",
-	}
 	
 	sets.Idle.TP = {
 		ammo="Staunch Tathlum +1",
@@ -103,28 +87,12 @@ function get_sets()
 		waist="Engraved belt",
 		left_ear="Odnowa Earring +1",
 		right_ear="Alabaster Earring",
-		left_ring="Roller's Ring",
+		left_ring="Chirich Ring +1",
 		right_ring="Karieyh Ring",
 		back="Null Shawl",
 	}
-	
-	sets.Idle.AminonRollers = {
-		ammo="Coiste Bodhar",
-		head="Maculele Tiara +3",
-		body="Horos Casaque +4",
-		hands="Regal Gloves",
-		legs="Gleti's Breeches",
-		feet="Macu. Toe Sh. +3",
-		neck={ name="Etoile Gorget +2", augments={'Path: A',}},
-		waist="Windbuffet Belt +1",
-		left_ear="Sherida Earring",
-		right_ear="Alabaster Earring",
-		left_ring="Roller's Ring",
-		right_ring="Moonlight Ring",
-		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
-	}
-	
-	sets.Idle.SB = sets.Idle.DT
+
+    sets.Idle.SB = sets.Idle.DT
 
 	sets.Idle.Aminon = {
 		ammo="Staunch Tathlum +1",
@@ -137,10 +105,12 @@ function get_sets()
 		waist="Engraved belt",
 		left_ear="Odnowa Earring +1",
 		right_ear={ name="Macu. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','"Store TP"+6','DEX+9 AGI+9',}},
-		left_ring="Roller's Ring",
+		left_ring="Chirich Ring +1",
 		right_ring="Karieyh Ring",
 		back="Null Shawl",
-}
+    }
+
+    sets.RollersRing = {left_ring="Roller's Ring"}
 
 	sets.Movement = {feet="Skadi's Jambeaux +1",}
 
@@ -171,21 +141,6 @@ function get_sets()
 		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
 	}
 	
-	sets.OffenseMode.DTRollers = {
-		ammo="Coiste Bodhar",
-		head="Malignance Chapeau",
-		body="Malignance Tabard",
-		hands="Malignance Gloves",
-		legs="Gleti's Breeches",
-		feet="Macu. Toe Sh. +3",
-		neck={ name="Etoile Gorget +2", augments={'Path: A',}},
-		waist="Windbuffet Belt +1",
-		left_ear="Alabaster Earring",
-		right_ear="Sherida Earring",
-		left_ring="Roller's Ring",
-		right_ring="Moonlight Ring",
-		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
-	}
 	
 	--Base TP set to build off
 	sets.OffenseMode.TP = {
@@ -215,7 +170,7 @@ function get_sets()
 		waist="Windbuffet Belt +1",
 		left_ear="Alabaster Earring",
 		right_ear="Sherida Earring",
-		left_ring="Roller's Ring",
+		left_ring="Lehko's Ring",
 		right_ring="Epona's Ring",
 		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
 	}
@@ -252,22 +207,6 @@ function get_sets()
 		left_ear="Alabaster Earring",
 		right_ear="Sherida Earring",
 		left_ring="Lehko's Ring",
-		right_ring="Moonlight Ring",
-		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
-	}
-
-	sets.OffenseMode.AminonRollers = {
-		ammo="Coiste Bodhar",
-		head="Maculele Tiara +3",
-		body="Horos Casaque +4",
-		hands="Regal Gloves",
-		legs="Gleti's Breeches",
-		feet="Macu. Toe Sh. +3",
-		neck={ name="Etoile Gorget +2", augments={'Path: A',}},
-		waist="Windbuffet Belt +1",
-		left_ear="Alabaster Earring",
-		right_ear="Sherida Earring",
-		left_ring="Roller's Ring",
 		right_ring="Moonlight Ring",
 		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
 	}
@@ -351,7 +290,7 @@ function get_sets()
 	sets.Flourish["Wild Flourish"] = {}												-- Readies target for Skillchain
 																					-- Flourishes III : Weapon Skill Buffs
 	sets.Flourish["Climactic Flourish"] = {head="Maculele Tiara +3"}				-- Forces Critical Hit(s) on the next attack(s) 
-	sets.Flourish["Striking Flourish"] = {body="Macu. Casaque +3"}						-- Forces a Double Attack on the next swing 
+	sets.Flourish["Striking Flourish"] = {body="Macu. Casaque +3"}					-- Forces a Double Attack on the next swing 
 	sets.Flourish["Ternary Flourish"] = {}											-- Forces a Triple Attack on the next swing
 	-------------------------------------------------------------------------------
 	-- Waltz Potency gear caps at 50%, while Waltz received potency caps at 30%. -- 
@@ -592,22 +531,6 @@ function pretarget_custom(spell,action)
 end
 -- Augment basic equipment sets
 function precast_custom(spell)
-    if spell.english == 'Spectral Jig' and buffactive.sneak then
-        send_command('cancel sneak')
-    elseif spell.english == 'Sneak' and spell.target.type == 'SELF' and buffactive.sneak then
-        send_command('cancel sneak')
-    elseif spell.english == ('Stoneskin') then
-        send_command('@wait 1.0;cancel stoneskin')
-    elseif spell.english:startswith('Monomi') then
-        send_command('@wait 1.7;cancel sneak')
-    elseif spell.english == 'Utsusemi: Ichi' then
-        send_command('@wait 1.7;cancel copy image,copy image (2)')
-    elseif (spell.english == 'Trance' or spell.type=='Waltz') and buffactive['saber dance'] then
-        send_command('cancel saber dance')
-    elseif spell.type=='Samba' and buffactive['fan dance'] then
-        send_command('cancel fan dance')
-    end
-
     equipSet = {}
     return Weapon_Check(equipSet)
 end
