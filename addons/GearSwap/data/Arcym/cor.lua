@@ -20,12 +20,16 @@ function get_sets()
     include('Mote-Include.lua')
 end
 
+-- Borrows some logic from rolltracker to check if an 11 was rolled
+-- https://github.com/Callios/FFXI-Addons/blob/main/rolltracker/rolltracker.lua
 -- Setup vars that are user-independent.  state.Buff vars initialized here will automatically be tracked.
 function job_setup()
     -- Whether to use Luzaf's Ring
     state.LuzafRing = M(true, "Luzaf's Ring")
     -- Whether a warning has been given for low ammo
     state.warned = M(false)
+
+    rollers_ring_setup()
 
     define_roll_values()
 end
@@ -146,7 +150,7 @@ function init_gear_sets()
 		
 	sets.precast.WS['Savage Blade'] = {ammo=gear.WSbullet,
         head="Nyame helm",neck="Republican platinum medal",ear1="Moonshade earring",ear2="Ishvara earring",
-        body="Nyame mail",hands="Chasseur's gants +3",ring1="Regal ring",ring2="Ephramad's ring",
+        body="Nyame mail",hands="Chasseur's gants +3",ring1="Sroda ring",ring2="Ephramad's ring",
         back=agi_wsd_cape,waist="Sailfi belt +1",legs="Nyame flanchard",feet="Nyame sollerets"}
     
     -- Midcast Sets
@@ -186,6 +190,9 @@ function init_gear_sets()
         head="Nyame helm",neck="Warder's charm +1",ear1="Infused earring",ear2="Eabani earring",
         body="Adamantite armor",hands="Nyame gauntlets",ring1="Murky ring",ring2="Shneddick ring",
         back="Archon cape",waist="Carrier's sash",legs="Nyame flanchard",feet="Nyame sollerets"}
+
+    --Replace this with a real ring once we get one :)
+    sets.RollersRing = {} --{ring2="Naji's loop"}
 	
     sets.Kiting = {ring2="Shneddick ring"}
 	
@@ -220,7 +227,7 @@ function init_gear_sets()
         head="Malignance chapeau",neck="Null loop",ear1="Telos earring",ear2="Suppanomimi",
         body="Malignance tabard",hands="Malignance gloves",ring1="Ilabrat ring",ring2="Murky ring",
         back="Null shawl",waist="Reiki yotai",legs="Malignance tights",feet="Malignance boots"}
-		
+
 end
 
 -- Select default macro book on initial load or subjob change.
@@ -291,6 +298,95 @@ function job_update(cmdParams, eventArgs)
     end
 end
 
+function job_buff_change(buff,gain)
+    -- keep track of 11 rolls wearing off, for Roller's ring
+	if string.match(buff, 'Roll') then
+		if not gain then
+            rollname = string.sub(buff, 1, -6)
+            add_to_chat(167, 'lost: '..rollname)
+            active11rolls[rollname] = nil
+            add_to_chat(167, 'active11rolls: '..dump(active11rolls))
+            if count(active11rolls) == 0 then
+                state.RollersRing:set(false)
+			    add_to_chat(167, 'Active 11 rolls: '..dump(active11rolls)..', Roller\'s ring = [OFF]')
+                handle_equipping_gear(player.status)
+            end
+		end
+	end
+end
+
+-- stuff to track active 11 rolls, for Roller's ring
+function rollers_ring_setup()
+    
+    state.RollersRing = M(false, "Roller's ring")
+
+    buffId = S{309} + S(gearswap.res.buffs:english(string.endswith-{' Roll'})):map(table.get-{'id'})
+
+    local rollInfoTemp = {
+        -- Okay, this goes 1-11 boost, Bust effect, Effect, Lucky, Unlucky, +1 Phantom Roll Effect, Job Bonus, Bonus Equipment and Effect,
+        ['Allies\''] = {6,7,17,9,11,13,15,17,17,5,17,'?','% Skillchain Damage',3,10, 1,{nil,0},{6,11120, 27084, 27085, 5}},--Needs Eval
+        ['Avenger\'s'] = {'?','?','?','?','?','?','?','?','?','?','?','?',' Counter Rate',4,8, 0,{nil,0}},
+        ['Beast'] = {64,80,96,256,112,128,160,32,176,192,320,'0','% Pet: Attack Bonus',4,8, 32,{'bst',100}},--/1024 Confirmed
+        ['Blitzer\'s'] = {2,3.4,4.5,11.3,5.3,6.4,7.2,8.3,1.5,10.2,12.1,'-3','% Attack delay reduction',4,9, 1,{nil,0},{4,11080, 26772, 26773, 5}},--Limited Testing for Bust, Needs more data for sure probably /1024
+        ['Bolter\'s'] = {0.3,0.3,0.8,0.4,0.4,0.5,0.5,0.6,0.2,0.7,1.0,'0','% Movement Speed',3,9, 0.2,{nil,0}},
+        ['Caster\'s'] = {6,15,7,8,9,10,5,11,12,13,20,'-10','% Fast Cast',2,7, 3,{nil,0},{7, 11140, 27269, 27269, 10}},
+        ['Chaos'] = {64,80,96,256,112,128,160,32,176,192,320,"-9.76",'% Attack!', 4,8, 32,{'drk',100}},--/1024 Confirmed
+        ['Choral'] = {8,42,11,15,19,4,23,27,31,35,50,'+25','- Spell Interruption Rate',2,6, 4,{'brd',25}},--SE listed Values and hell if I'm testing this
+        ['Companion\'s'] = {{4,20},{20,50},{6,20},{8,20},{10,30},{12,30},{14,30},{16,40},{18,40},{3,10},{25,60},'0',' Pet: Regen/Regain',2,10, {2,5},{nil,0}},
+        ['Corsair\'s'] = {10, 11, 11, 12, 20, 13, 15, 16, 8, 17, 24,'-6','% Experience Bonus',5,9, 2,{'cor',5}},--Needs Eval on Bust/Job Bonus
+        ['Courser\'s'] = {'?','?','?','?','?','?','?','?','?','?','?','?',' Snapshot',3,9, 0,{nil,0}}, --11160, 27443, 27444
+        ['Dancer\'s'] = {3,4,12,5,6,7,1,8,9,10,16,'-4',' Regen',3,7, 2,{'dnc',4}},--Confirmed
+        ['Drachen'] = {10,13,15,40,18,20,25,5,28,30,50,'0',' Pet: Accuracy Bonus',4,8, 5,{'drg',15}},--Confirmed
+        ['Evoker\'s'] = {1,1,1,1,3,2,2,2,1,3,4,'-1',' Refresh!',5,9, 1,{'smn',1}},--Confirmed
+        ['Fighter\'s'] = {2,2,3,4,12,5,6,7,1,9,18,'-4','% Double-Attack!',5,9, 1,{'war',5}},
+        ['Gallant\'s'] = {48,60,200,72,88,104,32,120,140,160,240,'-11.72','% Defense Bonus',3,7, 24,{'pld',120}},--/1024 Confirmed
+        ['Healer\'s'] = {3,4,12,5,6,7,1,8,9,10,16,'-4','% Cure Potency Received',3,7, 1,{'whm',4}},--Confirmed
+        ['Hunter\'s'] = {10,13,15,40,18,20,25,5,28,30,50,'-15',' Accuracy Bonus',4,8, 5,{'rng',15}},--Confirmed
+        ['Magus\'s'] = {5,20,6,8,9,3,10,13,14,15,25,'-8',' Magic Defense Bonus',2,6, 2,{'blu',8}},
+        ['Miser\'s'] = {30,50,70,90,200,110,20,130,150,170,250,'0',' Save TP',5,7, 15,{nil,0}},
+        ['Monk\'s'] = {8,10,32,12,14,15,4,20,22,24,40,'-?',' Subtle Blow', 3,7, 4,{'mnk',10}},
+        ['Naturalist\'s'] = {6,7,15,8,9,10,5,11,12,13,20,'-5','% Enhancing Magic Duration',3,7, 1,{'geo',5}},--Confirmed
+        ['Ninja'] = {10,13,15,40,18,20,25,5,28,30,50,'-15',' Evasion Bonus',4,8, 5,{'nin',15}},--Confirmed
+        ['Puppet'] = {5,8,35,11,14,18,2,22,26,30,40,'-8',' Pet: MAB/MAcc',3,7, 3,{'pup',12}},
+        ['Rogue\'s'] = {2,2,3,4,12,5,6,6,1,8,14,'-6','% Critical Hit Rate!',5,9, 1,{'thf',5}},
+        ['Runeist\'s'] = {10,13,15,40,18,20,25,5,28,30,50,'-15',' Evasion Bonus',4,8, 5,{'run',15}},--Needs Eval
+        ['Samurai'] = {8,32,10,12,14,4,16,20,22,24,40,'-10',' Store TP Bonus',2,6, 4,{'sam',10}},--Confirmed 1(Was bad),2,3,4,5,6,7,8,11 (I Wing Test)
+        ['Scholar\'s'] = {2,10,3,4,4,1,5,6,7,7,12,'-3','% Conserve MP',2,6, 1,{'sch',3}}, --Needs Eval Source ATM: JP Wiki
+        ['Tactician\'s'] = {10,10,10,10,30,10,10,0,20,20,40,'-10',' Regain',5,8, 2,{nil,0},{5, 11100, 26930, 26931, 10}},--Confirmed
+        ['Warlock\'s'] = {10,13,15,40,18,20,25,5,28,30,50,'-15',' Magic Accuracy Bonus',4,8, 5,{'rdm',15}},--
+        ['Wizard\'s'] = {4,6,8,10,25,12,14,17,2,20,30, "-10",' MAB',5,9, 2,{'blm',10}},
+    }
+
+    rollInfo = {}
+    for key, val in pairs(rollInfoTemp) do
+        rollInfo[gearswap.res.job_abilities:with('english', key .. ' Roll').id] = {key, unpack(val)}
+    end
+    
+    -- track active 11 rolls so we know when to remove roller's ring
+    active11rolls = {}
+end
+
+function count(table)
+    local count = 0
+    for _ in pairs(table) do 
+        count = count + 1 
+    end
+    return count
+end
+
+--debugging function for printing a table
+function dump(o)
+   if type(o) == 'table' then
+      local s = '{ '
+      for k,v in pairs(o) do
+         if type(k) ~= 'number' then k = '"'..k..'"' end
+         s = s .. '['..k..'] = ' .. dump(v) .. ','
+      end
+      return s .. '} '
+   else
+      return tostring(o)
+   end
+end
 
 -- Set eventArgs.handled to true if we don't want the automatic display to be run.
 function display_current_job_state(eventArgs)
@@ -321,7 +417,6 @@ function display_current_job_state(eventArgs)
     msg = msg .. ', Roll Size: ' .. ((state.LuzafRing.value and 'Large') or 'Small')
     
     add_to_chat(201, msg)
-
     eventArgs.handled = true
 end
 
@@ -448,6 +543,7 @@ end
 
 -- Modify the default idle set after it was constructed.
 function customize_idle_set(idleSet)
+
     if player.mpp < 51 then
         idleSet = set_combine(idleSet, sets.latent_refresh)
     end
@@ -456,7 +552,11 @@ function customize_idle_set(idleSet)
     end
 	
 	idleSet = set_combine(idleSet, sets.weapons[state.CombatWeapon.value])
-    
+
+    if state.RollersRing.value then
+        idleSet = set_combine(idleSet, sets.RollersRing)
+    end
+
     return idleSet
 end
 
@@ -470,3 +570,34 @@ function customize_melee_set(meleeSet)
     
     return meleeSet
 end
+
+-- event to check if you're receiving a COR roll of 11 (for Roller's Ring)
+windower.register_event('action', function(act)
+    if act.category == 6 and table.containskey(rollInfo, act.param) then
+        --This is used later to allow/disallow busting
+        --If you are not the rollActor you will not be disallowed to bust.
+        rollActor = act.actor_id
+        local rollID = act.param
+        local rollNum = act.targets[1].actions[1].param
+
+        if rollNum == 11 then 
+            -- anonymous function that checks if the player.id is in the targets without wrapping it in another layer of for loops.
+            if
+                function(act)
+                    for i = 1, #act.targets do
+                        if act.targets[i].id == player.id then
+                            return true
+                        end
+                    end
+                    return false
+                end(act)
+            then
+                state.RollersRing:set(true)
+                rollname = rollInfo[rollID][1]
+                active11rolls[rollname] = true
+                equip(sets.RollersRing)
+                add_to_chat(167, 'Active 11 rolls: '..dump(active11rolls)..', Roller\'s ring = [ON]')
+            end
+        end
+    end
+end)
